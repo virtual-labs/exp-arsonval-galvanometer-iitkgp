@@ -1,0 +1,1001 @@
+/* This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.*/
+
+
+.img-container {
+    display: inline-block;
+    position: relative;
+}
+
+#frequency-knob-container-fng {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    /*background-color: orange;*/
+    text-align: center;
+    cursor:pointer;
+}
+#amplitude-knob-container-fng {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    /*background-color: orange;*/
+    text-align: center;
+    cursor:pointer;
+}
+
+#Q{
+/*position: absolute;*/
+    width: 52%;
+    height: 100%;
+    top: 6.4%;
+    left: 106%;
+}
+#R{
+position: absolute;
+    width: 108%;
+    height: 98%;
+    top: 6.4%;
+    left: -111%;
+}
+#red_sw{
+position: absolute;
+    width: 6%;
+    height: 14%;
+    top: 26.4%;
+    left: 45%;
+}
+#mcb{
+position: absolute;
+    width: 7%;
+    height: 14%;
+    top: 26.4%;
+    left: 64%;
+}
+
+
+
+
+#knob1{
+	position: absolute;
+    width: 44%;
+    height: 35%;
+    top: 25.4%;
+    left: 30%;	
+}
+#knob2{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 7.4%;
+    left: 40%;	
+}
+#knob3{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 32.4%;
+    left: 15%;
+}
+
+#knob4{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 32.4%;
+    left: 65%;	
+}
+
+#knob5{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 57.4%;
+    left: 15%;	
+}
+#knob6{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 57.4%;
+    left: 65%;
+}
+
+#knob7{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 8.4%;
+    left: 19%;	
+}
+#knob8{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 8.4%;
+    left: 64%;	
+}
+#knob9{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 35.4%;
+    left: 20%;
+}
+#knob10{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 34.4%;
+    left: 65%;	
+}
+#knob11{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 61.4%;
+    left: 22%;	
+}
+
+#knob12{
+	position: absolute;
+    width: 27%;
+    height: 23%;
+    top: 61.4%;
+    left: 65%;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  /*border-collapse: collapse;*/
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
+
+
+
+
+
+
+ #bd6{
+    position: absolute;
+    left: 38%;
+    bottom: 25.3%;
+    padding: 4px;
+    
+ }
+
+#bd7{
+   position: absolute;
+    left: 53.3%;
+    bottom: 25.2%;
+    padding: 4px;
+    
+  }
+   #bd8{
+    position: absolute;
+    left: 73.8%;
+    bottom: 23.3%;
+    padding: 4px;
+	
+  }
+  #bd9{
+    position: absolute;
+    left: 84.3%;
+    bottom: 23.3%;
+    padding: 4px;
+}
+	
+  
+   #bd10{
+    position: absolute;
+    left: 58.5%;
+    bottom: 22.5%;
+    padding: 4px;
+}
+	
+ 
+   #bd11{
+    position: absolute;
+    left: 34.2%;
+    bottom: 55.5%;
+    padding: 4px;
+	
+  }
+
+#bd12{
+    position: absolute;
+    left: 58.6%;
+    bottom: 55.5%;
+    padding: 4px;
+}
+	
+  
+   #bd13{
+	position: absolute;
+    left: 33.6%;
+    bottom: 55.5%;
+    padding: 4px;
+  }
+  
+ #bd14{
+    position: absolute;
+    left: 58.9%;
+    bottom: 55.5%;
+    padding: 4px;;
+    
+  }
+   #bd15{
+    position: absolute;
+    left: 34.2%;
+    bottom: 55.7%;
+    padding: 4px;
+	
+  }
+  #bd16{
+    position: absolute;
+    left: 59.4%;
+    bottom: 55.5%;
+    padding: 4px;
+}
+	
+  
+   #bd17{
+   position: absolute;
+    left: 27%;
+    bottom: 4%;
+    padding: 4px;
+	
+  }
+   #bd18{
+    position: absolute;
+    left: 47%;
+    bottom: 4%;
+    padding: 4px;
+	
+  }
+
+ #bd19{
+    position: absolute;
+    left: 67%;
+    bottom: 4%;
+    padding: 4px;
+    
+ }
+
+#bd20{
+   position: absolute;
+    left: 47.2%;
+    bottom: 14.2%;
+    padding: 4px;
+    
+  }
+   #bd21{
+    position: absolute;
+    left: 57.8%;
+    bottom: 14.2%;
+    padding: 4px;
+	
+  }
+  #bd22{
+    position: absolute;
+    left: 50%;
+    bottom: 14.5%;
+    padding: 4px;
+}
+	
+  
+   #bd23{
+    position: absolute;
+    left: 59.6%;
+    bottom: 14.5%;
+    padding: 4px;
+	
+  }
+ 
+ #bd24{
+    position: absolute;
+    left: 48.5%;
+    bottom: 27.5%;
+    padding: 4px;
+	
+  }
+ 
+ 
+ #ray{
+	display:none; 
+	position: absolute;
+    width: 250%;
+    height: 120%;
+    left: -84.5%;
+    bottom: 43.5%;
+    transform: rotate(50deg);
+    z-index: -1;
+    opacity: 0.6;
+ }
+ 
+ #bloomDot{
+	display:none;
+	position: absolute;
+    left: 49.5%;
+    width: 1%;
+    height: 3%;
+    bottom: 87.5%;
+    border-radius: 50%;
+    background-color: #E8E066;
+    
+	/*-webkit-animation: pulse 1s alternate infinite;*/
+   }
+   
+ #result1{
+	display: block;
+    position: absolute;
+    left: 65.5%;
+    width: 48%;
+    height: 55%;
+    bottom: 19.5%;
+    border: 2px solid black;
+	 
+ }
+  #result2{
+	position: absolute;
+    left: 0.5%;
+    width: 43%;
+    height: 65%;
+    bottom: 8.5%;
+    border: 2px solid black;
+	 
+ } 
+  #avgtimep{
+	position: absolute;
+    left: 2.5%;
+    width: 30%;
+    height: 12%;
+    bottom: 83.5%;
+    text-align: center;
+    
+	 
+ } 
+  #Rc{
+	position: absolute;
+    left: 2.5%;
+    width: 30%;
+    height: 12%;
+    bottom: 60.5%;
+    text-align: center;
+    
+	 
+ } 
+  #Rs{
+	position: absolute;
+    left: 2.5%;
+    width: 30%;
+    height: 12%;
+    bottom: 39.5%;
+    text-align: center;
+   } 
+   #S{
+	position: absolute;
+    left: 2.5%;
+    width: 30%;
+    height: 12%;
+    bottom: 19.5%;
+    text-align: center;
+   } 
+   
+   
+  #tpp{
+	position: absolute;
+    left: 35.5%;
+    width: 56%;
+    height: 46%;
+    bottom: 49.5%;
+    
+	 
+ } 
+  #rcp{
+	position: absolute;
+    left: 34.5%;
+    width: 63%;
+    height: 46%;
+    bottom: 23.5%;
+   
+	 
+ } 
+  #rsp{
+	position: absolute;
+    left: 31.5%;
+    width: 68%;
+    height: 46%;
+    bottom: 4.5%;
+    
+ } 
+ 
+ #sp{
+	position: absolute;
+    left: 32.5%;
+    width: 68%;
+    height: 46%;
+    bottom: -16.5%;
+ } 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #result3{
+	display:none;
+	position: absolute;
+    left: 76.5%;
+    width: 30%;
+    height: 46%;
+    bottom: 19.5%;
+    border: 2px solid black;
+	 
+ }  
+  #result4{
+	display:none;
+	position: absolute;
+    left: 3.5%;
+    width: 41%;
+    height: 46%;
+    bottom: 19.5%;
+    border: 2px solid black;
+	 
+ }   
+   
+   
+   
+ 
+ @-webkit-keyframes pulse {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px #e7ff07, 0px 0px 5px 2px #ffdd07c7;
+}
+100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px rgb(255 220 0 / 89%), 0px 0px 15px 2px rgb(193 180 22);
+}
+}
+
+
+.glow1{
+animation:glowdot1 0.5s linear forwards;	
+}
+.glow2{
+animation:glowdot2 0.5s linear forwards;	
+}
+.glow3{
+animation:glowdot3 0.5s linear forwards;	
+}
+.glow4{
+animation:glowdot4 0.5s linear forwards;	
+}
+.glow5{
+animation:glowdot5 0.5s linear forwards;	
+}
+.glow6{
+animation:glowdot6 0.5s linear forwards;	
+}
+.glow7{
+animation:glowdot7 0.5s linear forwards;	
+}
+.glow8{
+animation:glowdot8 0.5s linear forwards;	
+}
+.glow9{
+animation:glowdot9 0.5s linear forwards;	
+}
+.glow10{
+animation:glowdot10 0.5s linear forwards;	
+}
+.glow11{
+animation:glowdot11 0.5s linear forwards;	
+}
+.glow12{
+animation:glowdot12 0.5s linear forwards;	
+}
+.glow13{
+animation:glowdot13 0.5s linear forwards;	
+}
+.glow14{
+animation:glowdot14 0.5s linear forwards;	
+}
+.glow15{
+animation:glowdot15 0.5s linear forwards;	
+}
+.glow16{
+animation:glowdot16 0.5s linear forwards;	
+}
+.glow17{
+animation:glowdot17 0.5s linear forwards;	
+}
+.glow18{
+animation:glowdot18 0.5s linear forwards;	
+}
+.glow19{
+animation:glowdot19 0.5s linear forwards;	
+}
+.glow20{
+animation:glowdot20 0.5s linear forwards;	
+}
+.glow21{
+animation:glowdot21 0.5s linear forwards;	
+}
+
+@keyframes glowdot1{
+    from {left: 87%;}
+	 to   {left: 5%;}
+}
+@keyframes glowdot2{
+    from {left: 5%;}
+	 to   {left: 87%;}
+}
+@keyframes glowdot3{
+     from {left: 78%;}
+	 to   {left: 5%;}
+}
+@keyframes glowdot4{
+     from {left: 5%;}
+	 to   {left: 78%;}
+}
+
+@keyframes glowdot5 {
+     from {left: 78%;}
+	 to   {left: 15%;}
+}
+@keyframes glowdot6 {
+     from {left: 15%;}
+	 to   {left: 78%;}
+}
+@keyframes glowdot7{
+     from {left: 70%;}
+	 to   {left: 15%;}
+}
+@keyframes glowdot8{
+     from {left: 15%;}
+	 to   {left: 70%;}
+}
+@keyframes glowdot9{
+     from {left: 70%;}
+	 to   {left: 20%;}
+}
+@keyframes glowdot10{
+     from {left: 20%;}
+	 to   {left: 70%;}
+}
+@keyframes glowdot11{
+     from {left: 65%;}
+	 to   {left: 20%;}
+}
+@keyframes glowdot12{
+     from {left: 20%;}
+	 to   {left: 65%;}
+}
+@keyframes glowdot13{
+     from {left: 65%;}
+	 to   {left: 30%;}
+}
+@keyframes glowdot14{
+     from {left: 30%;}
+	 to   {left: 65%;}
+}
+@keyframes glowdot15 {
+     from {left: 60%;}
+	 to   {left: 30%;}
+}
+@keyframes glowdot16 {
+     from {left: 30%;}
+	 to   {left: 60%;}
+}
+@keyframes glowdot17{
+     from {left: 60%;}
+	 to   {left: 40%;}
+}
+@keyframes glowdot18{
+     from {left: 40%;}
+	 to   {left: 60%;}
+}
+@keyframes glowdot19{
+     from {left: 55%;}
+	 to   {left: 40%;}
+}
+@keyframes glowdot20{
+     from {left: 40%;}
+	 to   {left: 55%;}
+}
+
+@keyframes glowdot21 {
+    from {left: 55%;}
+	 to   {left: 50%;}
+}
+
+/*.........underdamped osci.for part2 critical damping*/
+:root {
+  --change: 1000px;
+}
+
+/*.........underdamped osci.for part3 under damping*/
+:rootR {
+  --change2: 1000px;
+}
+:rootRs {
+  --change3: 1000px;
+}
+.glowtr1{
+animation:glowtrans1 1s linear forwards;	
+}
+.glowtr2{
+animation:glowtrans2 2s linear forwards;	
+}
+@keyframes glowtrans1{
+    from {left: 50%;}
+	 to   {left: --change2;}
+}
+@keyframes glowtrans2{
+    from {left: --change2;}
+	 to   {left: --change3;}
+}
+
+
+/*......... osci.for part4 freq*/
+:rootf1 {
+  --change4: 1000px;
+}
+:rootf2 {
+  --change5: 1000px;
+}
+.glowfr1{
+animation:glowf1 1s linear infinite;	
+}
+.glowfr2{
+animation:glowf2 1s linear infinite;	
+}
+@keyframes glowf1{
+	
+
+    from {left: --change4;}
+	 to   {left: --change5;}
+}
+@keyframes glowf2{
+    from {left: --change5;}
+	 to   {left: --change4;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.glowu1{
+animation:glowudot1 1s linear forwards;	
+}
+.glowu2{
+animation:glowudot2 1s linear forwards;	
+}
+.glowu3{
+animation:glowudot3 1s linear forwards;	
+}
+.glowu4{
+animation:glowudot4 1s linear forwards;	
+}
+.glowu5{
+animation:glowudot5 1s linear forwards;	
+}
+.glowu6{
+animation:glowudot6 1s linear forwards;	
+}
+@keyframes glowudot1{
+    from {left: 67%;}
+	 to   {left: 15%;}
+}
+@keyframes glowudot2{
+    from {left: 15%;}
+	 to   {left: 60%;}
+}
+@keyframes glowudot3{
+     from {left: 60%;}
+	 to   {left: 25%;}
+}
+@keyframes glowudot4{
+     from {left: 25%;}
+	 to   {left: 57%;}
+}
+
+@keyframes glowudot5 {
+     from {left: 55%;}
+	 to   {left: 30%;}
+}
+@keyframes glowudot6 {
+     from {left: 30%;}
+	 to   {left: --change;}
+}
+
+
+
+
+
+
+
+
+  
+#pValue{
+	position: absolute;
+    top: 105%;
+    left: 44%;
+    width: 22%;
+    text-align: center;
+    border: solid 1px #D4AC0D;	
+}
+
+#qValue{
+	position: absolute;
+    top: 105%;
+    left: 40%;
+    width: 30%;
+    text-align: center;
+    border: solid 1px #D4AC0D;	
+}
+#rValue{
+	position: absolute;
+    top: 105%;
+    left: 37%;
+    width: 40%;
+    text-align: center;
+    border: solid 1px #D4AC0D;	
+}
+#r1txt{
+	position: absolute;
+    top: 6%;
+    left: 28%;	
+	color:white;
+	
+}
+#r2txt{
+	position: absolute;
+    top: 6%;
+    left: 28%;	
+	color:white;
+	
+}
+#r3txt{
+	position: absolute;
+    top: 6%;
+    left: 28%;	
+	color:white;
+	
+}
+#r4txt{
+	position: absolute;
+    top: 6%;
+    left: 28%;	
+	color:white;
+	
+}
+#r5txt{
+	position: absolute;
+    top: 6%;
+    left: 28%;	
+	color:white;
+	
+}
+#r6txt{
+	position: absolute;
+    top: 6%;
+    left: 28%;	
+	color:white;
+	
+}
+#Nos{
+	position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 29%;
+    color: black;
+    text-align: center;
+	
+}
+#time{
+	position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 29%;
+    color: black;
+    text-align: center;
+	
+}
+#g{
+	position: absolute;
+    top: 44%;
+    left: 5%;
+    width: 29%;
+    color: black;
+    text-align: center;
+	
+}
+#c{
+	position: absolute;
+    top: 63%;
+    left: 5%;
+    width: 29%;
+    color: black;
+    text-align: center;
+	
+}
+#j{
+	position: absolute;
+    top: 82%;
+    left: 5%;
+    width: 29%;
+    color: black;
+    text-align: center;
+	
+}
+
+#theta1{
+	position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;
+	
+}
+#theta2{
+	position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;
+	
+}
+#dampR{
+	position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;	
+}
+#dampR2{
+	position: absolute;
+    top: 66%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;	
+}
+#th1{
+	position: absolute;
+    top: 7%;
+    left: 32%;
+    width: 81%;
+    color: blue;	
+}
+#th2{
+	position: absolute;
+    top: 26%;
+    left: 47%;
+    width: 51%;
+    color: blue;	
+}
+#dr{
+	position: absolute;
+    top: 46%;
+    left: 33%;
+    width: 47%;
+    color: blue;	
+}
+#dr2{
+	position: absolute;
+    top: 67%;
+    left: 33%;
+    width: 47%;
+    color: blue;	
+}
+#nosp{
+	position: absolute;
+    top: 7%;
+    left: 24%;
+    width: 81%;
+    color: blue;	
+}
+#timep{
+	position: absolute;
+    top: 22%;
+    left: 34%;
+    width: 47%;
+    color: blue;	
+}
+#gp{
+	position: absolute;
+    top: 43%;
+    left: 27%;
+    width: 81%;
+    color: blue;	
+}
+#cp{
+	position: absolute;
+    top: 62%;
+    left: 37%;
+    width: 52%;
+    color: blue;	
+}
+#jp{
+	position: absolute;
+    top: 81%;
+    left: 23%;
+    width: 81%;
+    color: blue;	
+}
+
+#thetapeak{
+	position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;
+	
+}
+#thetass{
+	position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;
+	
+}
+#pov{
+	position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 40%;
+    color: black;
+    text-align: center;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,900 @@
+<!-- This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.-->
+
+<!DOCTYPE html>
+<html lang="en"><!--html tag start-->
+<head>
+    <title>Transient and frequency response of D’ Arsonval galvanometer</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/adik.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script  src="./js/galvano.js">   </script>
+  
+  
+	
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.min.js  "></script>
+ 
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+
+
+
+<link rel="stylesheet" href="./css/galvano.css">
+<link rel="stylesheet" href="./css/demo.css">
+
+
+
+  <style>
+	.bluedot{
+	position:absolute;
+    border: 2px solid black;
+    border-radius:50%;
+    background-color:blue;
+    background-image:linear-gradient(90deg,#842029,#333333);
+	box-shadow: 5px 5px 8px #888888;
+	}
+	.handlep{
+	position:absolute;
+    border: 2px solid black;
+    border-radius:50%;
+    background-color:white;
+    background-image:url(./images/plus.png);
+	background-size:cover;
+	background-position:center;
+	
+	}
+	
+	.handlen{
+	position:absolute;
+    border: 2px solid black;
+    border-radius:50%;
+    background-color:white;
+    background-image:url(./images/minus.jpg);
+	background-size:cover;
+	background-position:center;
+	
+	}
+	
+	
+	
+	
+	
+  </style>
+  
+  
+  
+</head>
+<body><!--body tag start-->
+    <div class="container p-3 my-3 text-primary text-center border"><!--First Container under body tag start-->
+        <div class="row"><!--First row under 1st container start-->
+            <div class="col-md-3"><!--First col under 1st row start-->
+                <img class="img-fluid rounded" src="./images/vlabs.png" alt="VLabs logo">
+            </div><!--First col under 1st row end-->
+            <div class="col-md-6"><!--2nd col under 1st row start-->
+                <p class="display-1"> <b> Virtual Labs <br> IIT Kharagpur </b> </p>
+            </div><!--2nd col under 1st row end-->
+            <div class="col-md-3"><!--3rd col under 1st row start-->
+                <img class="img-fluid rounded" src="./images/iitkgp.png" alt="IIT KGP Logo" >
+            </div><!--3rd col under 1st row end-->
+        </div><!--First row under 1st container end-->
+    
+        <hr>
+        <div class="row"><!--2nd row under 1st container start-->
+            <div class="col-md-3"><!--First col under 2nd row start-->
+
+            </div><!--First col under 2nd row end-->
+            <div class="col-md-6"><!--2nd col under 2nd row start-->
+                <p class="h1"> <b>Simulation</b> </p>
+            </div><!--2nd col under 2nd row end-->
+            <div class="col-md-3"><!--3rd col under 2nd row start-->
+
+            </div><!--3rd col under 2nd row end-->
+        </div><!--2nd row under 1st container end-->
+        <hr>
+        <!--<div class="d-flex p-1 text-primary"><!--3rd row under 1st container start-
+          <div class="p-1" > <p class="h4"><a href="../index.html"> <span class="LN"> <b> Control and Instrumentation Lab </b></span> -- </a></p></div>
+          <div class="p-1"> <p class="h4"><a href="./index.html"> <span class="ExpN"> <b> Transient and frequency response of D’ Arsonval galvanometer </b> </span> </a></p></div>
+        </div><!--3rd row under 1st container end-->
+    </div><!--First Container under body tag end-->
+    
+    <!--<div class="container p-3 my-5 text-primary text-center border"><!--2nd Container under body tag start--
+        <div class="row"><!--First row under 2nd container start--
+
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Introduction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../aim.html">Objective</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../prequiz.html">Pre Quiz</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../theory.html">Theory</a>
+                </li>
+				<li class="nav-item">
+                  <a class="nav-link" href="../procedure.html">Procedure</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html">Simulation</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../postquiz.html">Post Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../feedback.html">Feedback</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../references.html">References</a>
+                  </li>
+
+              </ul>
+        </div><!--First row under 2nd container end--
+    </div><!--2nd Container under body tag end-->
+	
+    <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
+      <div class="row"><!--First row under 3rd container start-->
+        <div class="col-md-1"></div><!--First col under 3rd container start& end-->
+        <div class="col-md-10"><!--2nd col under 3rd container start-->
+            <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
+              <div id="inst" style="display:block;height:200px;overflow-y:auto;">
+					<ol>
+					<span style="color:blue">Finding galvanometer constants</span>
+					
+                      <li>At first connect the circuit diagram properly through the connecting dots (black dots) according to below instruction. First the galvanometer would be connected in series
+					  with the resistance box R (i.e series circuit).
+					  <br/>9-7, 7-17, 18-13, 14-22, 23-16, 19-20, 21-12, 15-17, 8-11, 6-16</li></br>
+  
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the key of 'k<sub>3</sub>' to open it. Then click on the mcb and switch on the light by clicking on the red switch.The 
+					  reflection from galvanometer (yellow spot) will be seen on the scale.</li><br/>
+					  
+					  <li>P, Q, R are the resistance boxes. Keeping R to zero value adjust the values of P (0.2 &ohm;) and Q (1670&ohm;) by respective rotating knobs to achieve 20cm deflection on scale.<br/>
+						(<b>Note:</b> click on plus sign to increase and on minus sign to decrease the value. The number,written on the knobs shows the multiplying factors of respective knobs.)<br/>
+						
+					  Now open the switch k<sub>2</sub> by removing the connection 13-18 through clicking on it. After clicking on the connection 13-18, one alert message will come. Keep ready stop watch in mobile. Click on the confirmation alert message
+					  and start the stop watch together. Observe the oscillation of the light spot on the scale. Count number of oscillations and stop the watch when the oscillation stops.</li><br/>
+
+					  <li>Enter the number of oscillations observed and time of the stop watch in the right hand side box under scale. Click on 'Show Table' button and then on 'Time period'. The 
+					  observation table will be shown at the bottom of the page. Switch off the light ,click on the key of 'k<sub>3</sub>' to open it and again connect 13-18. Switch on the light. Disconnect the connection 13-18 for another two times
+					  and take observation for time period. After taking three successive observations , calculate the average time period of the galvanometer. Write it in the input box under the table 
+					  and take a note of it.</li><br/>
+					  
+					  <li> After calculation of average time period , connect 13-18 again and click on the key of 'k<sub>3</sub>' to open it. Switch on the light. Deflection should be 20cm now on scale. To determine coil resistance R<sub>c</sub> (in &ohm;) of the galvanometer,
+					   slowly increase the value of R(70 &ohm;)to get 10cm deflection on scale. This value or R is called R<sub>c</sub>. Switch off the light and connect 13-18. Bring all the resistance values to zero.</li><br/>
+					 
+					 <li> Now the galvanometer would be connected in parallel the resistance box R (i.e. parallel circuit). To make the parallel connection, delete connection 14-22 and connect 14-16, 17-22. 
+					  Click on 'Check Connection' button to check whether the connection is proper or not. Click on the key of 'k<sub>3</sub>' to open it and switch on the light. To determine external resistance R<sub>s</sub> for critical damping of the galvanometer
+					  adjust the values of P (0.2 &ohm;) and Q (1670&ohm;) by respective rotating knobs to achieve 20cm deflection on scale. Now adjust R so as to obtain oscillatory motion, 
+					  then decrease R(96 &ohm;) until the motion just ceases to be oscillatory. This value of R is R<sub>s</sub>. Note down it. Switch off the light. </li></br>
+					 
+					 <li>Now make the series connection again, as said in step 1. To determine sensitivity S (in rad/ampere) of the galvanometer, keep the value of R ( R<sub>s</sub> &plus; R<sub>c</sub>) a  convenient value
+					 say 100 &ohm;. Set P to 0.1 &ohm; , open k<sub>3</sub> and switch on the light. Click on 'Show Table' button and then on 'Sensitivity'. The observation table will be shown at the bottom of the page. Increase the value of P to 0.2, 0.3, 0.4 and 0.5.
+					 Each time after increasing the value click on 'Show Table' button and then on 'Sensitivity' to take the observation. </li><br/>
+					 
+					 <li>At the end of 5 observations click on 'Plot' then on 'I<sub>g</sub> Vs. &theta; '. The plot will be shown with I<sub>g</sub> in (uA) and &theta; in radian. From the slope of the plot find the value of 
+					 sensitivity 'S' in rad/A. The formula is as follows:<br/>
+					 $$Sensitivity (\ rad/A) = \frac{difference \ in \ deflection (\ say \ \Delta\theta)}{ \ difference \ in \ galvanometer \ current \  \Delta I_g \times 10^{-6} }$$
+					 
+					 </li><br/>
+					 
+					 <li>Enter the values of average time period, coil resistance R<sub>c</sub>, external resistance R<sub>s</sub> and sensitivity S in the left hand side input box under the scale.
+					 Click on 'Calculate' button. The results will be shown in respective input boxes in right hand side box. Note down the values of galvanometer displacement constant(G),
+					 restoring constant(k), Moment of inertia(J). Click on 'Clear' button. Switch off the light. Bring all the resistances to zero value.</li><br/>
+					 
+					<br><br>
+					</ol>
+
+					<ol >
+					<span style="color:blue">Transient Response</span>
+					
+                      <li>At first connect the circuit diagram as said in step 1 of 'Finding galvanometer constants' section. Click on 'Experiments' button, then 'Transient Response' under it.</li></br>
+  
+					  <li>Click on the key of 'k<sub>3</sub>' to open it. Then switch on the light by clicking on the red switch.The 
+					  reflection from galvanometer (yellow spot) will be seen on the scale.</li><br/>
+					  
+					  <li>Adjust the values of P (0.2 &ohm;) and Q (1670&ohm;) by respective rotating knobs to achieve 20cm deflection on scale.</li><br/>
+					 
+					 <li>Now open the switch k<sub>2</sub> by removing the connection 13-18 through clicking on it. The under damped response for sudden disconnecting switch k<sub>2</sub>
+					 will be shown at the bottom of the page. Calculate &theta;<sub>1</sub> and &theta;<sub>2</sub> from the response using the formula below.<br/>
+					$$\theta_1 = (\ First \ overshoot - \ Steady \ state \ value) \ and \ \theta_2 = (\ Steady \ state \ value - \ First \ undershoot)$$
+
+					 </li></br>
+					 
+					 <li>Now put those values in the right hand side box under scale. Click on 'Calculate' button to calculate the value of open circuit damping ratio(&delta;<sub>0</sub>)</li><br/>
+					 
+					 <li>Switch off the light, connect 13-18 again, open k<sub>3</sub> and switch on the light. Set R to 200 &ohm;. The under damped response for this value of R will be shown at the bottom of the page.
+						The response is having small intervals along Y-axis so that the peak value or &theta;<sub>peak</sub> can be measured properly.</li><br/>
+					 
+					 <li>Enter the values of &theta;<sub>peak</sub>, &theta;<sub>steady-state</sub> (steady-state value of the response) in the left hand side input box under the scale.
+					 Click on 'Calculate' button to calculate the &prcent;overshoot. </li><br/>
+					 
+					 <li>Click on 'Show Table' button and then on '&prcent;Overshoot'. The observation table will be shown at the bottom of the page. Increase the value of R to 300, 400, 500.
+					 Each time after increasing the value click on 'Show Table' button and then on '&prcent;Overshoot' to take the observation. </li><br/>
+					 
+					 <li>At the end of 5 observations click on 'Plot' then on '&prcent;Overshoot Vs. &delta; '. The plot will be shown. Click on 'Clear' button. Switch off the light.</li><br/>
+					<br><br>
+					</ol>
+					
+					
+					<ol >
+					<span style="color:blue">Frequency Response</span>
+					
+                      <li>At first connect the circuit diagram as instructed below.<br/>
+						1-7, 7-17, 18-13, 14-22, 23-16, 19-20, 21-12, 15-17, 2-11, 6-16
+					Click on 'Check Connection' button to check whether the connection is proper or not. Click on 'Experiments' button, then 'Frequency Response' under it.</li></br>
+  
+					  <li>Click on the key of 'k<sub>3</sub>' to open it. 
+					  Enter the value of average time period of the galvanometer, calculated in section 1 (Finding galvanometer constants) in the input	box , 
+					  at the bottom of the page. Click on 'Calculate' button to calculate the natural frequency of galvanometer (&omega;<sub>n</sub>).</li><br/>
+					  
+					  <li>Switch on the light.The light spot will be oscillating since the supply is 2v ac now. Frequency is now 0.1Hz.</li><br/>
+					 
+					 <li>Click on 'Show Table' button and then on 'Oscillation Amplitude'. The observation table will be shown at the bottom of the page. </li></br>
+					 
+					 <li>Now increase the frequency of input signal through the frequency knob of function generator to 0.2 Hz,click on 'Sine' button and repeat step 4. Now increase frequency by step of 0.1 Hz up to 10 Hz.
+					 Each time after increasing the value click on 'Sine' button and repeat step 4.</li><br/>
+					 
+					<li>After taking observations click on 'Plot' button then on 'Amplitude Vs. Frequency'.The frequency response plot will be shown for a particular damping ratio(&delta;).</li><br/>
+					 
+					<li> Click on 'Clear' button. Switch off the light. Change the value of &delta;(say 0.6,0.5,0.4) by changing the value of R (say 300, 400, 500 &ohm;) and follow steps 4-6 again to 
+					observe the frequency response for a different damping ratio(&delta;).</li><br/>
+					
+		   </ol>
+		   </div>
+            </p> 
+          </div><!--2nd col under 3rd container end-->
+		  
+        <div class="col-md-1"></div><!--3rd col under 3rd container start& end-->
+      </div><!--First row under 3rd container end-->
+    </div><!--3rd Container under body tag end-->
+	
+    <div class="container p-3 my-5 text-center border" id="canvas" ><!--Fourth container under body tag start-->
+	
+<div class="row ">
+	<div class="col-md-1"></div>
+	
+	
+		<!--<div class="col-md-10" style="border:2px dotted #22B2E8">
+				<span style="color:black;font-weight:bold;">OSCILLOSCOPE</span><br/>
+				
+				<center><canvas id="mycanvas" width="430" height="350"  style="border:1px solid #157DA4"></canvas></center>
+				
+				
+				
+				
+
+				<div style="width:100%;border:2px dotted #22B2E8">
+				
+				 <button type="button" id="onff" onclick="mainswt()" value="off" class="btn btn-danger" disabled=disabled >Power</button>
+				
+				<!--<button type="button" id="sin" onclick="drawsine()"  class="btn btn-success " >Sine</button>--
+				<button type="button" id="sqr" onclick="drawsin()"  class="btn btn-primary "disabled=disabled >Sine</button>
+				<button type="button" id="sqrout" onclick="drawsinout()"  class="btn btn-primary " disabled=disabled>Output</button>
+				<button type="button" id="in" onclick="drawsin()"  class="btn btn-primary "disabled=disabled >Channel-1</button>
+				<button type="button" id="out" onclick="drawsinout()"  class="btn btn-primary "disabled=disabled >Channel-2</button>
+				<button type="button" id="inout" onclick="dual()"  class="btn btn-primary "disabled=disabled >Dual</button>
+				</div>
+	
+	
+	
+				
+		</div>
+		
+		
+		--<div class="col-md-5" style="border:2px dotted #22B2E8; text-align:center">
+		<span style="color:blue;font-weight:bold;">Observation</span><br/>
+		
+		
+		<br/><br/>
+				<span style="float:right;text-align:center">Steady-state Error</span>
+				<input type="number" id="sserr" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
+				
+				<br/>
+				<span style="float:right;text-align:center">Distance(mm)</span>
+				<input type="number" id="distance" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
+				
+				<br/>
+				<span style="float:right;text-align:center">Transport Lag(ms)</span>
+				<input type="number" id="tpl" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
+				
+				<br/>
+				<span style="float:right;text-align:center">Transfer Lag(ms)</span>
+				<input type="number" id="tfl" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
+				
+				
+				<br/>
+				
+		</div>	--	
+		
+		<div class="col-md-1"></div>
+		</div>-->
+		
+		<div class="row  ">
+		<div class="col-md-1"></div>
+		<div class="col-md-10" >
+				
+			<div style="width:100%;min-width:300px;border:2px dotted #22B2E8">
+			
+			        <span style="color:blue">Function Generator Controls</span><br/>
+					
+							<div class="d-inline-flex p-2">
+							
+							<div class="p-4 " >
+                                <button class="btn btn-success" onclick="frqRes()">Sine</button>
+								                           
+							</div>
+							
+							<div class="p-4 " >
+                                <input type="number" id="fq-knob-fng"  value="0.1" readOnly="false" oninput="freqfng()">
+								<br/>
+                                <label>Frequency(Hz)</label>                            
+							</div>
+							
+							<div class="p-4 " >
+                                <input type="number" id="amp-knob-fng" readOnly="false"  value="2" oninput="ampfng()">
+								<br/>
+                                <label>Amplitude(Volt)</label>
+							</div>
+							</div>
+							
+							<div class="d-inline-flex p-2">
+							<div class="p-4 " >                                
+							<div id="bd1"></div><br>
+							1
+							</div>
+							
+							<div class="p-4 " >
+							<div id="bd2"></div><br>
+							2
+							</div>
+							
+							</div>
+						
+				</div>						
+				
+						
+		</div>
+		<div class="col-md-1"></div>
+		
+	</div>
+	
+	<div class="row  ">
+		<div class="col-md-1"></div>
+		<div class="col-md-10" >
+				
+			<!--<div style="width:auto;min-width:300px;border:2px dotted #22B2E8">
+			
+			        <span style="color:blue">Oscilloscope Controls</span><br/><br/>
+					
+				<div class="d-inline-flex p-2">
+				
+				<div class="p-4 " style="border-right:2px solid black">
+				   <input type="text" id="amp-knob1" value="1" readOnly="false" oninput="amp1pdiv()">				   
+                   <input type="text"  id="positiony1" value="0" readOnly="false"  oninput="posiy1chnge()"  style="cursor:pointer;">
+				<br/>
+				<label>Volt(V)/div</label>
+				<br/>
+				<label id="positnlabely1">Position-Y</label>
+				<br/>
+				<label id="positnlabelch1">Channel 1</label>				
+				</div>
+   
+				<div class="p-4" style="border-right:2px solid black">
+				   <input type="text" id="amp-knob2"  value="1" readOnly="false" oninput="amp2pdiv()">				   
+    			   <input type="text"  id="positiony2" value="0" readOnly="false"  oninput="posiy2chnge()"  style="cursor:pointer;">
+				   <br/>
+				   <label>Volt(V)/div</label>
+				   <br/>
+				   <label id="positnlabely2">Position-Y</label>
+				   <br/>
+				   <label id="positnlabelch2" >Channel 2</label>
+				</div>
+				</div>
+				
+				<div class="d-inline-flex p-2"> 
+				<div class="p-4 ">			   
+				  <input  type="range"  id="positionx" min="-360" max="360" step="90"  value="0" oninput="posix2chnge()"  style="cursor:pointer;">
+                    <input type="text" id="fq-knob"  value="1000"  readOnly=false oninput="timepdiv()">
+					<br/>
+					<label id="positnlabelx">Position-X</label>    
+					<br/>
+                   <label>Time(ms)/div</label>
+				</div>
+				
+                </div> 
+
+				<div class="d-inline-flex p-2">
+							<div class="p-4 " >                                
+							<div id="bd3"></div><br>
+							Channel-1
+							</div>
+							
+							<div class="p-4 " >
+							<div id="bd4"></div><br>
+							Channel-2
+							</div>
+							
+							<div class="p-4 " >
+							<div id="bd5"></div><br>
+							Ground
+							</div>
+							
+							</div>				
+				
+			</div>-->
+			
+			<div class="d-inline-flex p-2">
+					<button type="button" id="check"  class="btn btn-primary">Check Connection</button>&nbsp;
+					
+					<div class="dropdown" >
+					<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Show Table
+					</button>
+					  <ul class="dropdown-menu">
+						<li><a class="dropdown-item" onclick="createTable1()">Time Period</a></li>
+						<li><a class="dropdown-item" onclick="createTable2()">Sensitivity</a></li>
+						<li><a class="dropdown-item" onclick="createTable3()">&percnt;Overshoot</a></li>
+						<li><a class="dropdown-item" onclick="createTable4()">Oscillation Amplitude</a></li>
+					  </ul>
+					</div>&nbsp;
+					
+					<div class="dropdown">
+					<button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Plot
+					</button>
+					  <ul class="dropdown-menu">
+						<li><a class="dropdown-item" onclick="plot_sensitivity()">I<sub>g</sub> Vs. &theta;</a></li>
+						<li><a class="dropdown-item" onclick="plot_overshoot()">&percnt;Overshoot Vs. &delta;</a></li>
+						<li><a class="dropdown-item" onclick="plot_frq()">Amplitude Vs. Frequency</a></li>
+					  </ul>
+					</div>&nbsp;
+					
+					<div class="dropdown">
+					<button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Experiments
+					</button>
+					  <ul class="dropdown-menu">
+						<li><a class="dropdown-item" onclick="exp1()">Galvanometer constants</a></li>
+						<li><a class="dropdown-item" onclick="exp2()">Transient response</a></li>
+						<li><a class="dropdown-item" onclick="exp3()">Frequency response</a></li>
+					  </ul>
+					</div>&nbsp;
+							
+					
+					<button type="button" id="clr" onclick="Refresh()" class="btn btn-danger">Clear</button>
+				</div>	
+					<input type="number" id="partchk" min="1" value="1" max="6" style="visibility:hidden;"><!--checks experiment's parts -->
+					<input type="number" id="dischk" min="1" value="3" max="3" style="visibility:hidden;" ><!--checks distance in sensor duct-->			
+			</div>
+		<div class="col-md-1"></div>
+		
+	</div>
+
+	
+	
+		<div class="row my-5 gy-2"><!--- 1st row under fourth container start--->
+		
+		<div class="col-md-1" >	</div>
+        
+			<div class="col-md-4" ><!--1st col under 1st row start -->
+				  <!-- Code Start here--> 
+				<div class="img-container"><!--img container div start-->
+				
+					<div id="bd6"></div> 
+					<div id="bd7"></div>
+										
+					<span style="position:absolute;top:76%;left:38%;color:red;font-weight:bold">6</span>
+					<span style="position:absolute;top:76%;left:53%;color:red;font-weight:bold">7</span>
+									
+					<img class="img-fluid " id="plant" src="images/galvanometer.png " />					
+					</div>
+				</div>
+				<div class="col-md-6" >
+				 
+				<div class="img-container"><!--img container div start-->
+				
+					<div id="bd8"></div> 
+					<div id="bd9"></div>
+					<div id="bd24"></div>
+					
+					<span style="position:absolute;top:79%;left:72%;color:red;font-weight:bold">8</span>
+					<span style="position:absolute;top:77%;left:89%;color:red;font-weight:bold">9</span>
+									
+					<img class="img-fluid " id="pboard" src="images/power_board.png " />
+
+					<img  id="red_sw" onclick="light_OnOff();movepoint()"  src="images/switch_off.png " value="off"/>
+					<img id="mcb" onclick=" mcbOn_Off()" src="images/mcb_off.jpg " value="off" />					
+					</div>
+				</div>	
+			<!--<button type="button" class = "btn btn-primary" onclick="TimePeriod()">oscillate</button>-->	
+			<div class="col-md-1" >	</div>
+        </div><!--1st row under fourth container end-->
+		
+		<div class="row my-5 gy-2">
+			<div class="col-md-12" >
+				 
+				<div class="img-container"><!--img container div start-->
+				
+					<div id="bd10"></div> 
+					
+					<span style="position:absolute;top:71%;left:54.8%;color:red;font-weight:bold">10</span>
+				
+					<img class="img-fluid " id="scale" src="images/scaletest2.png " />
+					<img  id="ray"  src="images/light_ray.png" />
+					<div id="bloomDot"></div>
+					
+					<div id ="result1" >
+					<input type="number" id="Nos"  value="0"  ><span id="nosp">Enter no. of oscillations</span>
+					<input type="number" id="time"  value="0" ><span id="timep">Enter time(sec)</span>
+					
+					<input type="number" id="g"  value="0" ><span id="gp">Displacement constant (G)(mw-m/amp)</span>
+					
+					<input type="number" id="c"  value="0" ><span id="cp">Restoring constant(k) (nw-m/rad)</span>
+					
+					<input type="number" id="j"  value="0" ><span id="jp">Moment of inertia(J) (kg-m<sup>2</sup>)</span>
+					
+					</div>
+					
+					<div id ="result2" >
+					<input type="number" id="avgtimep"  value="0"  ><span id="tpp">Enter the average value of  time period (T)</span>
+					<input type="number" id="Rc"  value="0" ><span id="rcp">Enter value of coil resistance (R<sub>c</sub>)&ohm;</span>
+					<input type="number" id="Rs"  value="0" ><span id="rsp">Enter value of external resistance (R<sub>s</sub>)&ohm;</span>
+					<input type="number" id="S"  value="0" ><span id="sp">Enter value of calculated sensitivity  (S)</span>
+					<button type="button" onclick="showResult1()" class="btn btn-success" style="position:absolute;top:83%;left:6%" >Calculate</button>
+					</div>
+					
+					<div id ="result3" >
+					<input type="number" id="theta1"  value="0"  ><span id="th1">Enter the value of &theta;<sub>1</sub></span>
+					<input type="number" id="theta2"  value="0"  ><span id="th2">Enter the value of &theta;<sub>2</sub></span>
+					<input type="number" id="dampR"  value="0"  ><span id="dr">&delta;<sub>0</sub></span>
+					<input type="number" id="dampR2"  value="0" readOnly=readOnly ><span id="dr2">&delta;</span>
+					<button type="button" onclick="showResult2()" class="btn btn-success" style="position:absolute;top:73%;left:66%" >Calculate</button>
+					</div>
+					
+					<div id ="result4" >
+					<input type="number" id="thetapeak"  value="0"  ><span id="th1">Enter the value of &theta;<sub>peak</sub></span>
+					<input type="number" id="thetass"  value="0"  ><span id="th2">Enter the value of &theta;<sub>steady-state</sub></span>
+					<input type="number" id="pov"  value="0" readOnly=readOnly ><span id="dr">&percnt;Overshoot</sub></span>
+					<button type="button" onclick="showResult3()" class="btn btn-success" style="position:absolute;top:73%;left:66%" >Calculate</button>					
+					</div>
+					
+					
+					</div>
+				</div>	
+		
+		</div>		
+		
+		
+		<div class="row my-5 gy-2"><!--- 2nd row under fourth container start--->
+		
+		<div class="col-md-4" >
+		<div class="img-container">
+		
+			<div id="bd11"></div> 
+			<div id="bd12"></div>
+			
+			<span style="position:absolute;top:15%;left:32%;color:red;font-weight:bold">11</span>
+			<span style="position:absolute;top:15%;left:58%;color:red;font-weight:bold">12</span>
+
+			<img class="img-fluid " id="sw1" src="images/k1.png " />
+		</div>
+        </div>
+		
+			<div class="col-md-4" ><!--1st col under 1st row start -->
+				  <!-- Code Start here--> 
+				<div class="img-container"><!--img container div start-->
+				
+					
+					<div id="bd13"></div>
+					<div id="bd14"></div>					 
+										
+					
+					<span style="position:absolute;top:15%;left:32%;color:red;font-weight:bold">13</span>
+					<span style="position:absolute;top:15%;left:58%;color:red;font-weight:bold">14</span>	
+				
+					
+					<img class="img-fluid " id="sw2" src="images/k2.png " />
+					
+					</div>
+			</div>
+							
+			<div class="col-md-4" >
+				<div class="img-container">
+					<div id="bd15"></div>
+					<div id="bd16"></div>
+
+					<span style="position:absolute;top:15%;left:32%;color:red;font-weight:bold">15</span>
+					<span style="position:absolute;top:15%;left:58%;color:red;font-weight:bold">16</span>
+
+					<img class="img-fluid " id="sw3" src="images/k3.png " onclick="Removek3()" />
+				</div>
+			</div>
+        </div><!--1st row under fourth container end-->
+		
+		
+		<div class="row my-5 gy-2">
+		 <div class="col-md-1" ></div>
+			<div class="col-md-5" >
+			
+			<div class="img-container">
+			<img  class="img-fluid" src="images/P.png " />
+			<input type="number" id ="pValue" value="0" readOnly=readOnly>
+			<div id="bd17"></div> 
+			<div id="bd18"></div>
+			<div id="bd19"></div>
+
+					<span style="position:absolute;top:98%;left:25%;color:red;font-weight:bold">17</span>
+					<span style="position:absolute;top:98%;left:45%;color:red;font-weight:bold">18</span>
+					<span style="position:absolute;top:98%;left:66%;color:red;font-weight:bold">19</span>
+								
+			
+			<!---knob  P--------->
+					<div class="bluedot" id="knob1" style=" pointer-events:none;">
+					<div class="handlep" id="knob1p" onclick="rotate1()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob1n"onclick="rotate2()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<input type="number" id="pnob" min="0" value="0" max="1" step="0.1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+			</div>
+			</div>
+			<div class="col-md-5" >
+			
+			<div class="img-container">
+			<img  class="img-fluid" src="images/Q.png " />
+			<input type="number" id ="qValue" value="0" readOnly=readOnly>
+			<div id="bd20"></div> 
+			<div id="bd21"></div>
+			
+					<span style="position:absolute;top:91%;left:46%;color:red;font-weight:bold">20</span>
+					<span style="position:absolute;top:91%;left:58%;color:red;font-weight:bold">21</span>
+					
+			<!---knob 1 Q--------->
+					<div class="bluedot" id="knob2" style=" pointer-events:none;">
+					<div class="handlep" id="knob2p" onclick="rotate3()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob2n"onclick="rotate4();movepoint()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<input type="number" id="qnob1" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 2 Q--------->
+					<div class="bluedot" id="knob3" style=" pointer-events:none;">
+					<div class="handlep" id="knob3p" onclick="rotate5()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob3n"onclick="rotate6()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<input type="number" id="qnob2" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 3 Q--------->
+					<div class="bluedot" id="knob4" style=" pointer-events:none;">
+					<div class="handlep" id="knob4p" onclick="rotate7()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob4n"onclick="rotate8()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<input type="number" id="qnob3" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 4 Q--------->
+					<div class="bluedot" id="knob5" style=" pointer-events:none;">
+					<div class="handlep" id="knob5p" onclick="rotate9()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob5n"onclick="rotate10()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<input type="number" id="qnob4" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 5 Q--------->
+					<div class="bluedot" id="knob6" style=" pointer-events:none;">
+					<div class="handlep" id="knob6p" onclick="rotate11()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob6n"onclick="rotate12()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<input type="number" id="qnob5" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+			</div>
+			</div>
+			
+			<div class="col-md-1" ></div>				
+			
+        </div>
+		
+		<div class="row my-5 gy-2">
+		 <div class="col-md-1" ></div>
+			<div class="col-md-10" >
+			
+			<div class="img-container">
+			<img  class="img-fluid" src="images/R.png " />
+			<input type="number" id ="rValue" value="0" readOnly=readOnly>
+			<div id="bd22"></div> 
+			<div id="bd23"></div>
+			
+					<span style="position:absolute;top:91%;left:49%;color:red;font-weight:bold">22</span>
+					<span style="position:absolute;top:91%;left:59%;color:red;font-weight:bold">23</span>
+								
+					<!---knob 1 R--------->
+					<div class="bluedot" id="knob7" style="pointer-events:none;">
+					<div class="handlep" id="knob7p" onclick="rotate13()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob7n"onclick="rotate14()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<span id="r1txt">100&ohm;</span>
+					<input type="number" id="rnob1" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 2 R--------->
+					<div class="bluedot" id="knob8" style="pointer-events:none;">
+					<div class="handlep" id="knob8p" onclick="rotate15()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob8n"onclick="rotate16()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<span id="r2txt">0.1&ohm;</span>
+					<input type="number" id="rnob2" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 3 R--------->
+					<div class="bluedot" id="knob9" style="pointer-events:none;">
+					<div class="handlep" id="knob9p" onclick="rotate17()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob9n"onclick="rotate18()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<span id="r3txt">1 k&ohm;</span>
+					<input type="number" id="rnob3" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 4 R--------->
+					<div class="bluedot" id="knob10" style="pointer-events:none;">
+					<div class="handlep" id="knob10p" onclick="rotate19()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob10n"onclick="rotate20()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<span id="r4txt">1&ohm;</span>
+					<input type="number" id="rnob4" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 5 R--------->
+					<div class="bluedot" id="knob11" style="pointer-events:none;">
+					<div class="handlep" id="knob11p" onclick="rotate21()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob11n"onclick="rotate22()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<span id="r5txt">10 k&ohm;</span>
+					<input type="number" id="rnob5" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>
+					
+					<!---knob 6 R--------->
+					<div class="bluedot" id="knob12" style="pointer-events:none;">
+					<div class="handlep" id="knob12p" onclick="rotate23()"style="width:30%;height:30%;top:33%;left:0%;"></div>
+					<div class="handlen" id="knob12n"onclick="rotate24()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+					<span id="r6txt">10&ohm;</span>
+					<input type="number" id="rnob6" min="0" value="0" max="10" step="1" style="position:absolute;width:60%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none;color:white" readOnly=readOnly>
+					</div>	
+		
+			</div>
+		</div>
+		<div class="col-md-1" ></div>
+	</div>	
+		
+		
+	<div class="row my-5 gy-2"><!--- 4th row under fourth container start--->	
+		<div class="col-md-1"></div>
+        <div class="col-md-10"><!--1st col under 4th row start -->			
+		
+			<table id="myTable1" style="visibility:hidden;width:100%">
+			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>No. of Oscillations</th> 
+					<th>Time(sec)</th>
+					<th>Time period</th>
+				</tr>
+				<tr>
+				<th colspan=4>Average Time period= <input type="number" id="Tp" value='0'></th>
+				</tr>  
+			</table>
+			
+			<table id="myTable2" style="visibility:hidden;width:100%">
+			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>P(ohm)</th>
+					<th>d(cm)</th>
+					<th>Deflection(&theta;)</th> 
+					<th>Ig</th>
+					
+				</tr>
+				
+			
+			</table>
+			<table id="myTable3" style="visibility:hidden;width:100%">
+			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>R(ohm)</th>
+					<th>$$\delta = \delta_0 + \frac{G^2}{R  2\sqrt{Jk}}$$ </th>
+					<th>&theta;<sub>peak</sub>(rad)</th>
+					<th>&theta;<sub>steady-state</sub>(rad)</th>					
+					<th>$$\% Overshoot = \frac{\theta_{peak} - \theta_{steady-state}}{\theta_{steady-state}}$$</th>
+					
+				</tr>
+				
+			
+			</table>
+			
+			
+			<span id="sfp4" style="visibility:hidden">Enter the value of average time period of the galvanometer:&nbsp;<input type ="number" id ="tp4" ><br/><br/>
+			The natural frequency(&omega;<sub>n</sub>) = <input type ="number" id ="wn4" readOnly=readOnly >
+			<button class="btn btn-primary" onclick="showResult4()">Calculate</button></span>
+			
+			<table id="myTable4" style="visibility:hidden;width:100%">
+			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>Frequency(Hz)</th>
+					<th>&omega;(rad/s)</th>
+					<th>&delta;</th>
+					<th>Amplitude (cm)</th>					
+					
+					
+				</tr>
+				
+			
+			</table>
+			
+			
+		</div><!--1st col under 4th row end -->
+		<div class="col-md-1"></div>
+		</div>
+		
+	
+		
+
+	 <div class="row justify-content-center"><!-----------------------graph T vs. w----------------------------------------->
+		
+	 
+			<div class="col-md-12">
+				<div id = "plotbucket" class="content-center" style="display:none; position:relative; border:3px solid blue;height:530px;width:823px ">
+				
+				<button type="button" id="exportChart" class="btn btn-primary"  >Download Plot</button>
+				<button type="button" id="exportChart_trans" class="btn btn-primary"  >Download Plot</button>
+				
+					<div id="chartContainer"  style="display:none; position:absolute; height: 80%; width: 100%;z-index:1 "></div>
+					<div id="chartContainer_trans"  style="display:none; position:absolute; height: 80%; width: 100%;z-index:1 "></div>
+					
+					
+				</div>
+				
+			</div>
+			
+			
+		
+	</div>	
+
+	
+	
+          <!-- Code End here-->
+        </div><!--Fourth container under body tag end-->
+          
+      <!--</div>
+    </div>-->
+
+    <div class="container p-3 my-5 text-primary text-center border"><!--Last and fifth container under body tag start-->
+      <div class="row">
+        <footer>
+          <div class="row ce">
+            <div class="col-sm-12">
+              <p class="h5"><i> Copyright ©2022 <a href="http://vlabs.iitkgp.ac.in/vlt/">Virtual Labs IIT Kharagpur</a> </i><br><br>
+              <a href="../../license/index.html" target="_blank"> Licensing Terms </a>
+            </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+  </div><!--Last and fifth container under body tag end-->
+  
+  <script src="./js/jsPlumb.js"></script>	
+	<script src="./js/demo.js"> </script> 
+	 
+<script src="../assets/js/iframeResize.js"></script></body><!--body tag end-->
+</html><!--html tag end-->

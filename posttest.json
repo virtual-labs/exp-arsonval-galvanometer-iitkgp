@@ -1,0 +1,123 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following is not the feature of a modern control system?",
+      "answers": {
+        "a": " Correct power level",
+        "b": "No oscillation",
+        "c": "Quick response",
+        "d": "Accuracy"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2.  A ________ device prevents the oscillation of the moving system and enables the latter to reach its final position quickly",
+      "answers": {
+        "a": "Deflecting",
+        "b": "Controlling",
+        "c": "Damping",
+        "d": "Any of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The relative damping of a galvanometer is 0.8, its logarithmic decrement is approximately ",
+      "answers": {
+        "a": "0.25",
+        "b": "1.25",
+        "c": "-4.19",
+        "d": "4.19"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The resistance required for critical damping in a galvanometer is 1000 &ohm;. The galvanometer is currently having a resistance of 800 ohm. The galvanometer circuit  is,",
+      "answers": {
+        "a": "Under damped",
+        "b": "Undamped",
+        "c": " Overdamped",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The deflection &theta; is related to the electric current I in a galvanometer by the relation",
+      "answers": {
+        "a": "I &prop; &theta;",
+        "b": "I &prop; tan &theta;",
+		"c": "I &prop; sin &theta;",
+        "d": "I &prop; cos &theta;"
+        
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the shape of a magnet in moving coil galvanometer to make the radial magnetic field?",
+      "answers": {
+        "a": ". Convex cylindrical magnet",
+        "b": " Horse-shoe magnet",
+        "c": " Concave cylindrical magnet ",
+        "d": "None"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Phosphor- bronze wire is used in suspension because it has",
+      "answers": {
+        "a": "A large couple per unit twist",
+        "b": "A small couple per unit twist",
+        "c": "Low conductivity",
+        "d": "High Sensitivity"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. A moving coil instrument has the following data.Number of turns = 100,Width of the coil = 20 mm,Depth of the coil = 30 mm,Flux density in the gap = 0.1 Wb/m<sup>2</sup>,Calculate the defl ecting torque when carrying a current of 10 mA.",
+      "answers": {
+        "a": "6 &times; 10<sup>-5</sup>Nm",
+        "b": "4&times; 10<sup>-5</sup>Nm",
+        "c": "10Nm",
+        "d": "None of the above"
+        
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }, 
+    
+	
+	{
+      "question": "9. A moving coil instrument has the following data. No. of turns = 100, Width of the coil = 20 mm,Depth of the coil = 30 mm,Flux density in the gap = 0.1 Wb/m2,The deflection torque = 30 &times; 10–6 Nm,Calculate the current through the moving coil.",
+      "answers": {
+        "a": "2mA",
+        "b": "5mA",
+        "c": "10mA",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "10. Which one of the following instrument works on the principle of magnetism?",
+      "answers": {
+        "a": "Moving iron instruments",
+        "b": "Moving coil instruments",
+		    "c": "Both a and b",
+        "d": "None of the above"
+       
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+	
+	
+  ]
+}

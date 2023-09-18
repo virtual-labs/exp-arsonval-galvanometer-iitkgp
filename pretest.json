@@ -1,0 +1,119 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. An instrument detects the presence of electric current in the circuit, is known as,",
+      "answers": {
+        "a": "Galvanometer",
+        "b": "Voltmeter",
+        "c": "Rheostat",
+        "d": "Wattmeter"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In a D’Arsonval galvanometer what is the purpose of using iron core between two pole faces?",
+      "answers": {
+        "a": "The effect of stray magnetic field is reduced",
+        "b": " Moment of inertia of moving parts become smaller",
+        "c": "Cost of production is reduced",
+        "d": "Flux density in the air gap becomes high, causing large deflecting torque"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which is the most common absolute instrument that gives the measured current in form of tangent of deflected angle?",
+      "answers": {
+        "a": "Tangent Galvanometer",
+        "b": "Tangent Voltmeter",
+        "c": "Tangent Rheostat",
+        "d": "Tangent Wattmeter"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Galvanometer connected with high resistance in series is used as",
+      "answers": {
+        "a": "Ohmmeter",
+        "b": "Ammeter",
+        "c": "Wattmeter",
+        "d": "Voltmeter"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Sometimes D’Arsonval galvanometer do not use ferromagnetic cores between the poles of permanent magnet, in this case,",
+      "answers": {
+        "a": "The flux density becomes smaller, resulting in low deflecting torque",
+        "b": "The dimension of moving coil can be made smaller, thereby reducing Moment of inertia.",
+        "c": "The magnetic field may not be radial, resulting in a non-uniform scale even if spring control is used.",
+        "d": "All the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "6.  Which one of the following galvanometers used for deflection of current?",
+      "answers": {
+        "a": "Ballistic galvanometer",
+        "b": "Dead-beat galvanometer",
+        "c": "Both a and b",
+        "d": " None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },	
+	
+	
+	{
+      "question": "7. Which one of the following meters is a type of electromechanical device?",
+      "answers": {
+        "a": "Galvanometer",
+        "b": "Ammeter",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+	 "question": "8. The advantages of using galvanometers are ___________?",
+      "answers": {
+        "a": "High accuracy",
+        "b": "High reliability",
+        "c": "High sensitivity",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+	 "question": "9. The mechanical hysteresis is an example for ______________ damping?",
+      "answers": {
+        "a": " Material damping",
+        "b": "Hydraulic damping",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	{
+	 "question": "10. Which one of the following components are used in ballistic galvanometer?",
+      "answers": {
+        "a": "Permanent magnets",
+        "b": "Spring",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+	
+  ]
+}
