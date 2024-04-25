@@ -36,7 +36,7 @@ A torsion head is provided for the adjustment of the coil position and zero sett
 
 <div align="center">
 <img class="img-fluid"  src="./images/plant_deflect2.png" alt=""><br>
-<b>Fig. 2  Measurement of deflection with lamp and scale arrangement </b>          
+<b>Fig. 2.  Measurement of deflection with lamp and scale arrangement </b>          
 </div><br>
 
 <b>Torque Equation</b><br/>
