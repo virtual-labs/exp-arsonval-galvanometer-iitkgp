@@ -13,10 +13,10 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2. In a D’Arsonval galvanometer what is the purpose of using iron core between two pole faces?",
+      "question": "2. In a D’Arsonval galvanometer what is the purpose of using iron core between two pole faces ?",
       "answers": {
         "a": "The effect of stray magnetic field is reduced",
-        "b": " Moment of inertia of moving parts become smaller",
+        "b": "Moment of inertia of moving parts become smaller",
         "c": "Cost of production is reduced",
         "d": "Flux density in the air gap becomes high, causing large deflecting torque"
       },
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3. Which is the most common absolute instrument that gives the measured current in form of tangent of deflected angle?",
+      "question": "3. Which is the most common absolute instrument that gives the measured current in form of the tangent of deflected angle ?",
       "answers": {
         "a": "Tangent Galvanometer",
         "b": "Tangent Voltmeter",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "4. Galvanometer connected with high resistance in series is used as",
+      "question": "4. Galvanometer connected with high resistance in series is used as ___",
       "answers": {
         "a": "Ohmmeter",
         "b": "Ammeter",
@@ -46,23 +46,23 @@
       "difficulty": "beginner"
     },
     {
-      "question": "5. Sometimes D’Arsonval galvanometer do not use ferromagnetic cores between the poles of permanent magnet, in this case,",
+      "question": "5. Sometimes D’Arsonval galvanometer does not use ferromagnetic cores between the poles of permanent magnet, in this case,",
       "answers": {
-        "a": "The flux density becomes smaller, resulting in low deflecting torque",
-        "b": "The dimension of moving coil can be made smaller, thereby reducing Moment of inertia.",
+        "a": "The flux density becomes smaller, resulting in low deflecting torque.",
+        "b": "The dimension of moving coil can be made smaller, thereby reducing moment of inertia.",
         "c": "The magnetic field may not be radial, resulting in a non-uniform scale even if spring control is used.",
-        "d": "All the above"
+        "d": "All of the above"
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
     },
 	{
-      "question": "6.  Which one of the following galvanometers used for deflection of current?",
+      "question": "6. How does a galvanometer become an ammeter ?",
       "answers": {
-        "a": "Ballistic galvanometer",
-        "b": "Dead-beat galvanometer",
-        "c": "Both a and b",
-        "d": " None of the above"
+        "a": "By wiring a high resistance shunt to the galvanometer in parallel.",
+        "b": "By connecting a low resistance shunt to the galvanometer in parallel.",
+        "c": "A high resistance shunt is connected in series with the galvanometer.",
+        "d": "A low resistance shunt is connected in series with the galvanometer."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -70,18 +70,18 @@
 	
 	
 	{
-      "question": "7. Which one of the following meters is a type of electromechanical device?",
+      "question": "7. Which one of the following meters is an integrating type instrument?",
       "answers": {
-        "a": "Galvanometer",
+        "a": "Voltmeter",
         "b": "Ammeter",
-        "c": "Both a and b",
+        "c": "Energy meter",
         "d": "None of the above"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
 	{
-	 "question": "8. The advantages of using galvanometers are ___________?",
+	 "question": "8. The advantage of using galvanometers is ___________?",
       "answers": {
         "a": "High accuracy",
         "b": "High reliability",
@@ -93,25 +93,26 @@
     },
 	
 	{
-	 "question": "9. The mechanical hysteresis is an example for ______________ damping?",
+      "question": "9. A moving coil instrument has the following data.<br/> Number of turns = 100, width of the coil = 20 mm, depth of the coil = 30 mm, flux density in the gap = 0.1 Wb/m<sup>2</sup>. Calculate the deflection when carrying a current of 10 mA and the control spring constant is 2 &times; 10<sup>–6</sup> Nm/degree.",
       "answers": {
-        "a": " Material damping",
-        "b": "Hydraulic damping",
-        "c": "Both a and b",
-        "d": "None of the above"
-      },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-	{
-	 "question": "10. Which one of the following components are used in ballistic galvanometer?",
-      "answers": {
-        "a": "Permanent magnets",
-        "b": "Spring",
-        "c": "Both a and b",
-        "d": "None of the above"
+        "a": "6 &deg;",
+        "b": "10 &deg;",
+        "c": "30 &deg;",
+        "d": "45 &deg;"
+        
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+	{
+	 "question": "10. The advantage of PMMC type instruments is _______",
+      "answers": {
+        "a": "They can be modified with the help of shunts and resistance to cover a wide range of currents and voltages.",
+        "b": "They display no hystersis.",
+        "c": "Since operating fields of such instruments are very strong, they are not significantly affected by stray magnetic fields.",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
 	
