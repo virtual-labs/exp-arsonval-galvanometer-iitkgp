@@ -4,7 +4,7 @@
     Project Scientist-Technical,
     Virtual Labs IIT Kharagpur.*/ 
 
-window.alert('Desktop or Laptop view is preferable. \n Rotate your screen For better view ')
+window.alert('Desktop view in chrome is preferable or rotate your screen for better view. ')
 
 ///////////oscilloscope and Function generator VARIABLES GLOBAL/////////////////////////////////////////////////////////////	
 var canvas,ctx;
@@ -676,7 +676,7 @@ function light_OnOff() {
     var sw = document.getElementById('red_sw');
 	var mcb = document.getElementById('mcb');
 	
-    if (sw.src.match ("images/switch_off.png") && mcb.src.match("images/mcb_on.jpg")) {
+    if (sw.src.match ("images/switch_off.png") && mcb.src.match("images/mcb_on.jpg") && document.getElementById('keychk').value == 0) {
 
         document.getElementById('red_sw').src = "images/switch_on.png";
 		document.getElementById('ray').style.display = "block";
@@ -691,8 +691,11 @@ function light_OnOff() {
         }
 		
 	else if(sw.src.match ("images/switch_off.png") && mcb.src.match("images/mcb_off.jpg")){
-		alert('Power on first \n Click on the mcb');	
-			
+		alert('Power on first \n Click on the mcb');
+	}
+
+	else if (sw.src.match ("images/switch_off.png") && mcb.src.match("images/mcb_on.jpg") && document.getElementById('keychk').value == 1) {
+		alert('Open switch K3 first');	
 		}
     else  {
         document.getElementById("red_sw").value = "off";
@@ -701,6 +704,7 @@ function light_OnOff() {
 		document.getElementById('bloomDot').style.display = "none";
 		document.getElementById('plant').src = "images/galvanometer.png";
 		document.getElementById('sw3').src = "images/k3.png";
+		document.getElementById('keychk').value=1;
 		TimePeriodRev();
 		}
 }
@@ -755,7 +759,7 @@ function mcbOn_Off(){
 function Removek3(){
 if(document.getElementById('sw3').src.match('images/k3.png')){	
 document.getElementById('sw3').src = 'images/k3_keyRemoved.png';
-
+document.getElementById('keychk').value = 0;
 }	
 	
 }
@@ -1438,6 +1442,7 @@ else if(P == 0){
 
 document.getElementById('plotbucket').style.display  = "block";
 document.getElementById('chartContainer').style.display  = "none"; 
+document.getElementById('myPlot').style.display  = "none";
 document.getElementById('chartContainer_trans').style.display  = "block"; 
 	
 	var chart = new CanvasJS.Chart("chartContainer_trans",
@@ -1445,17 +1450,18 @@ document.getElementById('chartContainer_trans').style.display  = "block";
       animationEnabled: true,
 		  animationDuration: 10000, 
 	  title:{
-      text: "Transient Response (v vs. sec) "
-	  
+      text: "Transient Response (rad vs. sec) ",
+	  fontFamily: "Times New Roman",
+	  fontSize:25,
       },
 	  
 	  axisX:{
         interlacedColor: "#B2F9FA",
-        title: "Time(Sec)"
+        title: "Time (sec)"
       },
     axisY: [
 	      {/////output Y axis
-            title: "Amplitude(v)",
+            title: "Amplitude (rad)",
 			
 			//maximum:0.03,
         },
@@ -1464,7 +1470,7 @@ document.getElementById('chartContainer_trans').style.display  = "block";
 	data: [
       {        
         type: "spline",
-		color:"109DB6",
+		color:"black",
         dataPoints:dataOPPoints
 	
        },
@@ -1634,6 +1640,7 @@ point.style.left = nxtpos2 + '%';
 if(zeta<1){
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer').style.display  = "none"; 
+document.getElementById('myPlot').style.display  = "none";
 document.getElementById('chartContainer_trans').style.display  = "block"; 
 	
 	var chart = new CanvasJS.Chart("chartContainer_trans",
@@ -1641,17 +1648,18 @@ document.getElementById('chartContainer_trans').style.display  = "block";
       animationEnabled: true,
 		  animationDuration: 10000, 
 	  title:{
-      text: "Transient Response (v vs. sec) "
-	  
+      text: "Transient Response (rad vs. sec) ",
+	  fontFamily: "Times New Roman",
+	  fontSize:25,
       },
 	  
 	  axisX:{
         interlacedColor: "#B2F9FA",
-        title: "Time(Sec)"
+        title: "Time (sec)"
       },
     axisY: [
 	      {/////output Y axis
-            title: "Amplitude(rad)",
+            title: "Amplitude (rad)",
 			interval: 0.001,
 			//maximum:0.03,
         },
@@ -1774,9 +1782,9 @@ OsAmp = math.divide(1,denom);///oscillation amplitude in cm
 
 Oscm = math.multiply(thetaf_rad,200,OsAmp);
 
-var pos =math.round(49.5);
- pos1 = math.round(math.add(pos,math.multiply(2,Oscm)));
- pos2 = math.round(math.subtract(pos,math.multiply(2,Oscm)));
+var pos = math.round(49.5);
+ pos1 = math.round(math.add(pos,math.add(2,Oscm)));
+ pos2 = math.round(math.subtract(pos,math.add(2,Oscm)));
 frq_osci();
 
 //rootf1.style.setProperty('--change4', pos1 + "%");
@@ -1795,7 +1803,7 @@ function frq_osci(){
 setTimeout(function(){
 document.getElementById('bloomDot').classList.add("glowfr2");
 	   },500);*/
-
+clearInterval(fpoint);
 fpoint = setInterval(movefp, 30); 	   
 	   
 }	   
@@ -2834,7 +2842,7 @@ function createTable2() {///sensitivity
         
     var row = table2.insertRow(++tabrowindex2);
    
-    if (table2.rows.length <= 10) {
+    if (table2.rows.length <= 100) {
         
          // Row increment
         for (var q = 0; q < 5; q++) {
@@ -2866,7 +2874,7 @@ function createTable3() {///overshoot (transient response)
         
     var row = table3.insertRow(++tabrowindex3);
    
-    if (table3.rows.length <= 10) {
+    if (table3.rows.length <= 100) {
         
          // Row increment
         for (var q = 0; q < 6; q++) {
@@ -2898,7 +2906,7 @@ function createTable4() {///Oscillation Amplitude (frequency response)
         
     var row = table4.insertRow(++tabrowindex4);
    
-    if (table4.rows.length <= 20) {
+    if (table4.rows.length <= 200) {
         
          // Row increment
         for (var q = 0; q < 5; q++) {
@@ -2966,7 +2974,7 @@ function Refresh(){
 	arr3=[];
 	arr4=[];
 	document.getElementById('plotbucket').style.display="none"; 
-	
+	document.getElementById('myPlot').style.display  = "none";
 	
  }
 
@@ -2975,7 +2983,7 @@ function Refresh(){
 	
 	
 	
-	function plot_sensitivity(){
+	/* function plot_sensitivity(){
 		var dataPoints1=[];
 		
 	 document.getElementById('plotbucket').style.display  = "block";	 
@@ -2995,16 +3003,19 @@ function Refresh(){
     {
       //animationEnabled: true,
 		  //animationDuration: 10000, 
-	  title:{
-      text: "Ig Vs. Theta Plot "
-	  
+	 title:{
+      text: "Galvanometer current (Ig) Vs. Deflection (θ) Plot ",
+	  fontFamily:"Times New Roman",
+	  fontSize:25,
       },
 	  
 	  axisX:
 	  
 	  {
         interlacedColor: "#B2F9FA",
-        title: "Theta(rad)"
+        title: "θ (rad)",
+		fontFamily:"Times New Roman",
+	  fontSize:25,
       },
 	  
 	  
@@ -3013,8 +3024,9 @@ function Refresh(){
 	  
     axisY: 
 	      {// Y axis
-            title: "Ig(uA)",
-			
+            title: "Ig (uA)",
+			fontFamily:"Times New Roman",
+	  fontSize:25,
 			//maximum:28,
         },
 		
@@ -3022,7 +3034,7 @@ function Refresh(){
 	data: [
       {        
         type: "line",
-		color:"109DB6",
+		color:"black",
         dataPoints:dataPoints1
 	
        },
@@ -3036,9 +3048,81 @@ function Refresh(){
 	document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
 	chart.exportChart({format: "jpg"})});	
-	}
+	} */
+	
+	///plotly.js plot for calculating sensitivity
 
-function plot_overshoot(){
+function plot_sensitivity(){
+	
+	var dataPoints1=[];///delta values
+	var dataArrayY1 = [];///%overshoot values
+	
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+ 
+    table2 = document.getElementById('myTable2');
+    for (var tabrowindex = 1; tabrowindex < table2.rows.length; tabrowindex++) {
+        var rwe = table2.rows[tabrowindex].cells;
+
+        dataPoints1.push(parseFloat(rwe[3].innerHTML));
+		dataArrayY1.push(parseFloat(rwe[4].innerHTML));
+		//console.log('x='+rwe[2].innerHTML);
+		//console.log('y='+rwe[5].innerHTML);
+    }
+ var trace1 = {
+  x: dataPoints1,
+  y: dataArrayY1,
+  
+  marker: {color:"black"},
+  type: 'line'
+};
+	
+const data = [trace1];
+
+
+var layout = {
+  title: {
+	  text:'<b>Galvanometer current (I<sub>g</sub>) Vs. Deflection (\u03B8) Plot </b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>I<sub>g</sub> (\u03BC A)</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>\u03B8 (rad)</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}	
+
+
+
+
+/* function plot_overshoot(){
 	
 	var dataPoints2=[];
 	 document.getElementById('plotbucket').style.display  = "block";	 
@@ -3101,10 +3185,78 @@ function plot_overshoot(){
 	document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
 	chart.exportChart({format: "jpg"})});	
-	}
+	} */
+	///plotly.js chart for %overshoot vs. damping raio delta
+function plot_overshoot(){
+	
+	var dataPoints2=[];///delta values
+	var dataArrayY2 = [];///%overshoot values
+	
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+ 
+    table3 = document.getElementById('myTable3');
+    for (var tabrowindex = 1; tabrowindex < table3.rows.length; tabrowindex++) {
+        var rwe = table3.rows[tabrowindex].cells;
+
+        dataPoints2.push(parseFloat(rwe[2].innerHTML));
+		dataArrayY2.push(parseFloat(rwe[5].innerHTML));
+		//console.log('x='+rwe[2].innerHTML);
+		//console.log('y='+rwe[5].innerHTML);
+    }
+ var trace1 = {
+  x: dataPoints2,
+  y: dataArrayY2,
+  
+  marker: {color:"black"},
+  type: 'spline'
+};
+	
+const data = [trace1];
 
 
-	function plot_frq(){
+var layout = {
+  title: {
+	  text:'<b>% Maximum overshoot Vs. Damping ratio \u03B4</b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>% Maximum overshoot</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>Damping ratio \u03B4</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}	
+	
+	
+
+	/* function plot_frq(){
 	
 	var dataPoints3 =[];
 	 document.getElementById('plotbucket').style.display  = "block";	 
@@ -3166,10 +3318,79 @@ function plot_overshoot(){
 	document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
 	chart.exportChart({format: "jpg"})});	
-	}
+	} */
 
 
+///plotly.js chart for %overshoot vs. damping raio delta
+function plot_frq(){
+	
+	var dataPoints3=[];///frequency values
+	var dataArrayY3 = [];///amplitude values
+	
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+ 
+    table4 = document.getElementById('myTable4');
+    for (var tabrowindex = 1; tabrowindex < table4.rows.length; tabrowindex++) {
+        var rwe = table4.rows[tabrowindex].cells;
 
+        dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		dataArrayY3.push(parseFloat(rwe[4].innerHTML));
+		//console.log('x='+rwe[2].innerHTML);
+		//console.log('y='+rwe[5].innerHTML);
+    }
+ var trace1 = {
+  x: dataPoints3,
+  y: dataArrayY3,
+  
+  marker: {color:"black"},
+  type: 'spline'
+};
+	
+const data = [trace1];
+
+
+var layout = {
+  title: {
+	  text:'<b>Amplitude Vs. Frequency Plot </b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>Amplitude (cm)</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>Frequency (Hz)</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+	  
+	  type:'log',
+	  autorange:true,
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}	
 
 
 

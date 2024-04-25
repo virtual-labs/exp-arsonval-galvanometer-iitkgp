@@ -7,19 +7,30 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Lab**
-<b> Experiment|     <b> **Transient and frequency response of D’ Arsonval galvanometer and Experiment 11**
+<b> Experiment|     <b> **Transient and frequency response of D’Arsonval Galvanometer**
 
 
 ### About the Experiment 
 **System description**
 
-The action of the most commonly dc meter is based on the fundamental principle of the motor. The motor action is produced by the flow of a small current through a moving coil, which is positioned in the field of a permanent magnet. This basic moving coil system is often called the D’Arsonval galvanometer. The D’Arsonval movement shown in Fig. below employs a spring-loaded coil through which the measured current flows. The coil (rotor) is in a nearly homogeneous field of a permanent magnet and moves in a rotary fashion. The amount of rotation is proportional to the amount of current flowing through the coil. A pointer attached to the coil indicates the position of the coil on a scale calibrated in terms of current or voltage.It responds to dc current only, and has an almost linear calibration. The magnetic shunt that varies the field strength is used for calibration.
-			  
+A D’Arsonval galvanometer is a device designed to detect small currents in order of nA or &micro;A. Its application lies in bridges (Wheatstone bridge, Kelvin double bridge etc.) and potentiometers, where it indicates null deflection or zero current.
+
+The working principle of the galvanometer is based on the equation
+$$\tau_d = \tau_r$$
+
+Where <span class="fontCss2">&tau;<sub>d</sub></span> is the deflecting torque and <span class="fontCss2">&tau;<sub>d</sub> &Proportional; i<sub>d</sub></span> (coil current)<br/>
+<span class="fontCss2">&tau;<sub>r</sub></span> is the restoring torque, brings the moving system (spring enabled) back to the initial position.
+
+
+The galvanometer pointer movement shown in Fig. 1, employs a spring-loaded coil through which the measured current flows. 
+
 <div align="center">
-<img class="img-fluid"  src="experiment/images/plant_intro.png" alt="">                  
+<img class="img-fluid"  src="experiment/images/plant_intro.png" alt=""><br>
+<b>Fig. 1. D’Arsonval principle</b>
 </div>
 
-<b>Name of Developer | <b> **Prof. Alok Kanti Deb**
+
+<b>Subject matter expertise | <b> **Prof. Alok Kanti Deb**
 :--|:--|
 <b> Institute | <b>  **Indian Institute of Technology Kharagpur**
 <b> Email id|     <b>  **alokkanti@ee.iitkgp.ac.in**
@@ -30,4 +41,10 @@ The action of the most commonly dc meter is based on the fundamental principle o
 
 SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | **Piyali Chattopadhyay** | Developer & Integration | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
+1 | **Piyali Chattopadhyay** | Developer | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
+2 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
+
+
+<link href="experiment/simulation/css/galvano.css" rel="stylesheet">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

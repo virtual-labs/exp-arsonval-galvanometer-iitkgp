@@ -2,47 +2,47 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following is not the feature of a modern control system?",
+      "question": "1. In ballistic galvanometer, the frame on which the coil is wound is non-metallic. It is ____",
       "answers": {
-        "a": " Correct power level",
-        "b": "No oscillation",
-        "c": "Quick response",
-        "d": "Accuracy"
+        "a": "To avoid the production of induced e.m.f.",
+        "b": "To avoid the production of eddy currents.",
+        "c": "To increase the production of eddy currents.",
+        "d": "To increase the production of induced e.m.f."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "2.  A ________ device prevents the oscillation of the moving system and enables the latter to reach its final position quickly",
+      "question": "2. A null type of instrument as compared to a deflection type instrument has ______",
       "answers": {
-        "a": "Deflecting",
-        "b": "Controlling",
-        "c": "Damping",
-        "d": "Any of the above"
+        "a": "A higher accuracy",
+        "b": "A lower sensitivity",
+        "c": "A faster response",
+        "d": "All the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a second order system, the peak overshoot is 100 &percnt;. The value of damping factor is :",
+      "answers": {
+        "a": "1",
+        "b": "0.707",
+        "c": "0",
+        "d": "0.5"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "3. The relative damping of a galvanometer is 0.8, its logarithmic decrement is approximately ",
+      "question": "4. The sensitivity of a moving coil galvanometer can be increased by decreasing ____",
       "answers": {
-        "a": "0.25",
-        "b": "1.25",
-        "c": "-4.19",
-        "d": "4.19"
+        "a": "The number of turns in the coil.",
+        "b": "The area of the coil.",
+        "c": "The magnetic field.",
+        "d": "The couple per unit twist of the suspension."
       },
       "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "4. The resistance required for critical damping in a galvanometer is 1000 &ohm;. The galvanometer is currently having a resistance of 800 ohm. The galvanometer circuit  is,",
-      "answers": {
-        "a": "Under damped",
-        "b": "Undamped",
-        "c": " Overdamped",
-        "d": "None of the above"
-      },
-      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
@@ -58,18 +58,18 @@
       "difficulty": "beginner"
     },
     {
-      "question": "6. What is the shape of a magnet in moving coil galvanometer to make the radial magnetic field?",
+      "question": "6. What is the shape of the magnet, used in D’Arsonval galvanometer when a large flux is required in the air gap ?",
       "answers": {
-        "a": ". Convex cylindrical magnet",
-        "b": " Horse-shoe magnet",
-        "c": " Concave cylindrical magnet ",
-        "d": "None"
+        "a": "Convex cylindrical magnet",
+        "b": "Horse-shoe magnet",
+        "c": "Concave cylindrical magnet ",
+        "d": "None of the above"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "7. Phosphor- bronze wire is used in suspension because it has",
+      "question": "7. Phosphor- bronze wire is used in suspension because it has _____",
       "answers": {
         "a": "A large couple per unit twist",
         "b": "A small couple per unit twist",
@@ -80,11 +80,11 @@
       "difficulty": "beginner"
     },
     {
-      "question": "8. A moving coil instrument has the following data.Number of turns = 100,Width of the coil = 20 mm,Depth of the coil = 30 mm,Flux density in the gap = 0.1 Wb/m<sup>2</sup>,Calculate the defl ecting torque when carrying a current of 10 mA.",
+      "question": "8. A moving coil instrument has the following data.<br/> Number of turns = 100, width of the coil = 20 mm, depth of the coil = 30 mm, flux density in the gap = 0.1 Wb/m<sup>2</sup>. Calculate the deflecting torque when carrying a current of 10 mA.",
       "answers": {
-        "a": "6 &times; 10<sup>-5</sup>Nm",
-        "b": "4&times; 10<sup>-5</sup>Nm",
-        "c": "10Nm",
+        "a": "6 &times; 10<sup>-5</sup> Nm",
+        "b": "4 &times; 10<sup>-5</sup> Nm",
+        "c": "10 Nm",
         "d": "None of the above"
         
       },
@@ -94,11 +94,11 @@
     
 	
 	{
-      "question": "9. A moving coil instrument has the following data. No. of turns = 100, Width of the coil = 20 mm,Depth of the coil = 30 mm,Flux density in the gap = 0.1 Wb/m2,The deflection torque = 30 &times; 10–6 Nm,Calculate the current through the moving coil.",
+      "question": "9. A moving coil instrument has the following data.<br/> No. of turns = 100, width of the coil = 20 mm, depth of the coil = 30 mm, flux density in the gap = 0.1 Wb/m<sup>2</sup>, the deflection torque = 30 &times; 10<sup>–6</sup> Nm. Calculate the current through the moving coil.",
       "answers": {
-        "a": "2mA",
-        "b": "5mA",
-        "c": "10mA",
+        "a": "2 mA",
+        "b": "5 mA",
+        "c": "10 mA",
         "d": "None of the above"
       },
       "correctAnswer": "b",
@@ -106,15 +106,15 @@
     },
 	
 	{
-      "question": "10. Which one of the following instrument works on the principle of magnetism?",
+      "question": "10. In measurement systems, which of the following static characteristics are desirable ?",
       "answers": {
-        "a": "Moving iron instruments",
-        "b": "Moving coil instruments",
-		    "c": "Both a and b",
-        "d": "None of the above"
+        "a": "Accuracy",
+        "b": "Sensitivity",
+		"c": "Reproducibility",
+        "d": "All the above"
        
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
 	

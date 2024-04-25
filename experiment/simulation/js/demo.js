@@ -181,16 +181,16 @@ jsPlumb.ready(function () {
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-            if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 1)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 1)) && confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for k2 opening
+            if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 1)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 1)) && confirm("Delete connection ?")) {////for k2 opening
                instance.deleteConnection(conn);
 			   TimePeriod();
 			}
-			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 2)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 2)) && confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for k2 opening
+			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 2)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 2)) && confirm("Delete connection ?")) {////for k2 opening
                instance.deleteConnection(conn);
 			   criticalDamping();
 			}
 
-			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 3)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 3)) && confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for k2 opening
+			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 3)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 3)) && confirm("Delete connection ?")) {////for k2 opening
                instance.deleteConnection(conn);
 			   TimePeriod();
 			   transients();
