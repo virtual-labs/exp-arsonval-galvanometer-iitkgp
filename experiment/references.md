@@ -3,7 +3,7 @@
 
 1) Electronic instrumentation (2015, McGraw Hill Education) - H S. Kalsi
 
-2) A Course in Electrical and Electronic Measurements and Instrumentation- A.K. Sawhney
+2) A Course in Electrical and Electronic Measurements and Instrumentation- A.K. Sawhney (Dhanpat Rai & Co. (Pvt.) Ltd., 2012)
 
 
 #### Video Lectures
