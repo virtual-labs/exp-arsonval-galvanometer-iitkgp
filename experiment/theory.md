@@ -67,7 +67,7 @@ where <span class="fontCss2">&alpha;</span> = Angle between direction of magneti
 The field is radial and, therefore, <span class="fontCss2">&alpha;</span> = 90&deg;<br/>
 Hence, force on each side of coil = <span class="fontCss3">NB</span><span class="fontCss2">il</span>...(1)<br/>
 
-Deflecting torque <span class="fontCss3">T<sub>d</sub></span> = force &times; distance<br/> 
+Deflecting torque <span class="fontCss3">T<sub>d</sub></span> (Newton-meter) = force &times; distance<br/> 
 = <span class="fontCss3">NB</span><span class="fontCss2">ilr</span> ...(2)<br/>
 = <span class="fontCss3">NBA</span><span class="fontCss2">i</span> ...(3)<br/>
 where <span class="fontCss3">A</span> = <span class="fontCss2">lr</span> = area of coil, m<sup>2</sup><br/>
@@ -128,14 +128,14 @@ Damping torque is assumed to be proportional to velocity of the moving system. T
 
 $$T_D = D \frac{d\theta}{d t}....(9)$$
 
-where, <span class="fontCss3">T<sub>D</sub></span> is damping torque, <span class="fontCss3">D</span> is damping constant in Newton-meter/rad s<sup>-1</sup><br/><br/>
+where, <span class="fontCss3">T<sub>D</sub></span> is damping torque in Newton-meter, <span class="fontCss3">D</span> is damping constant in Newton-meter/rad s<sup>-1</sup><br/><br/>
 
 
 <b>4. Control constant (<span class="fontCss3">K</span>) :</b> A controlling torque is produced due to elasticity of the system which tries to restore the moving system back to its original position.
 
 $$T_c = K \theta$$
 
-where, <span class="fontCss2">T<sub>c</sub></span> is controlling torque, <span class="fontCss3">K</span> = control constant or restoring constant in Newton-meter/rad<br/><br/>
+where, <span class="fontCss2">T<sub>c</sub></span> is controlling torque in Newton-meter, <span class="fontCss3">K</span> = control constant or restoring constant in Newton-meter/rad<br/><br/>
 
 <b>Dynamic Behaviour of Galvanometer :</b><br/>
 
