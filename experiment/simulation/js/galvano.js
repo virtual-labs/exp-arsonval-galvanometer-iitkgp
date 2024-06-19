@@ -1785,6 +1785,8 @@ Oscm = math.multiply(thetaf_rad,200,OsAmp);
 var pos = math.round(49.5);
  pos1 = math.round(math.add(pos,math.add(2,Oscm)));
  pos2 = math.round(math.subtract(pos,math.add(2,Oscm)));
+ /* pos1 = math.round(math.add(pos,Oscm));
+ pos2 = math.round(math.subtract(pos,Oscm)); */
 frq_osci();
 
 //rootf1.style.setProperty('--change4', pos1 + "%");
@@ -1813,27 +1815,27 @@ function movefp(){
 if(goRight2) {
 			
 			temp2++;
-			if(temp2 == pos1) { /* move right*/
+			if(temp2 == math.round(pos1)) { /* move right*/
 				goRight2 = false;
 				goLeft2 = true;
 				
 			}
+			
+			
 		} else if(goLeft2) {
 			//goLeft1=false;
 			temp2--;
-			if(temp2 == pos2) { /* move left */
+			if(temp2 == math.round(pos2)) { /* move left */
 				goLeft2 = false;
 				goRight2 = true;
 				
 			}
+			
 		}
-		document.getElementById('bloomDot').style.left = temp2+'%';
+	
 
-  
+document.getElementById('bloomDot').style.left = temp2+'%';
 }
-
-
-
 
 
 
@@ -3322,35 +3324,38 @@ Plotly.newPlot('myPlot', data, layout);
 
 
 ///plotly.js chart for %overshoot vs. damping raio delta
-function plot_frq(){
-	
+var counter=0, dloop1 =[],deltz;
+function plot_frq1(){
+	//counter++;
 	var dataPoints3=[];///frequency values
 	var dataArrayY3 = [];///amplitude values
-	
+		
 	 document.getElementById('plotbucket').style.display  = "none";	 
 	 document.getElementById('chartContainer').style.display  = "none";
 	 document.getElementById('chartContainer_trans').style.display  = "none";
 	 document.getElementById('myPlot').style.display = "block";
- 
+	 
+	 deltz = math.floor(document.getElementById('dampR2').value*10)/10;
+	
     table4 = document.getElementById('myTable4');
+	
     for (var tabrowindex = 1; tabrowindex < table4.rows.length; tabrowindex++) {
         var rwe = table4.rows[tabrowindex].cells;
-
-        dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		
+		//if(counter == 1){
 		dataArrayY3.push(parseFloat(rwe[4].innerHTML));
-		//console.log('x='+rwe[2].innerHTML);
-		//console.log('y='+rwe[5].innerHTML);
+		dloop1 = [...dataArrayY3];
     }
  var trace1 = {
   x: dataPoints3,
   y: dataArrayY3,
-  
+   name:'\u03B4 ='+ deltz,
   marker: {color:"black"},
   type: 'spline'
 };
-	
-const data = [trace1];
 
+var data = [trace1];
 
 var layout = {
   title: {
@@ -3391,10 +3396,432 @@ var layout = {
 Plotly.newPlot('myPlot', data, layout); 
 	
 	}	
+var dloop2=[],deltz2;
+function plot_frq2(){
+	//counter++;
+	var dataPoints3=[];///frequency values
+	
+	var dataArrayY4 = [];///amplitude values
+		
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+	 
+	 deltz2 = math.floor(document.getElementById('dampR2').value*10)/10;
+	
+    table4 = document.getElementById('myTable4');
+	
+    for (var tabrowindex = 1; tabrowindex < table4.rows.length; tabrowindex++) {
+        var rwe = table4.rows[tabrowindex].cells;
+		dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		
+		//if(counter == 1){
+		dataArrayY4.push(parseFloat(rwe[4].innerHTML));
+		dloop2 = [...dataArrayY4];
+
+    }
+ var trace1 = {
+  x: dataPoints3,
+  y: dloop1,
+   name:'\u03B4 ='+ deltz,
+  marker: {color:"black"},
+  type: 'spline'
+};
+var trace2 = {
+  x: dataPoints3,
+  y: dataArrayY4,
+   name:'\u03B4 ='+ deltz2,
+  marker: {color:"red"},
+  type: 'spline'
+};
+
+var data = [trace1,trace2];
+
+var layout = {
+  title: {
+	  text:'<b>Amplitude Vs. Frequency Plot </b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>Amplitude (cm)</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+	   yaxis2: {
+    overlaying: 'y',
+    side: 'right'
+  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>Frequency (Hz)</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+	  
+	  type:'log',
+	  autorange:true,
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}
+	
+	var dloop3=[],deltz3;
+function plot_frq3(){
+	//counter++;
+	var dataPoints3=[];///frequency values
+	
+	var dataArrayY5 = [];///amplitude values
+		
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+	 
+	 deltz3 = math.floor(document.getElementById('dampR2').value*10)/10;
+	
+    table4 = document.getElementById('myTable4');
+	
+    for (var tabrowindex = 1; tabrowindex < table4.rows.length; tabrowindex++) {
+        var rwe = table4.rows[tabrowindex].cells;
+		dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		
+		//if(counter == 1){
+		dataArrayY5.push(parseFloat(rwe[4].innerHTML));
+		dloop3 = [...dataArrayY5];
+
+    }
+ var trace1 = {
+  x: dataPoints3,
+  y: dloop1,
+   name:'\u03B4 ='+ deltz,
+  marker: {color:"black"},
+  type: 'spline'
+};
+var trace2 = {
+  x: dataPoints3,
+  y: dloop2,
+   name:'\u03B4 ='+ deltz2,
+  marker: {color:"red"},
+  type: 'spline'
+};
+var trace3 = {
+  x: dataPoints3,
+  y: dataArrayY5,
+   name:'\u03B4 ='+ deltz3,
+  marker: {color:"green"},
+  type: 'spline'
+};
+
+var data = [trace1,trace2,trace3];
+
+var layout = {
+  title: {
+	  text:'<b>Amplitude Vs. Frequency Plot </b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>Amplitude (cm)</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+	   yaxis2: {
+    overlaying: 'y',
+    side: 'right'
+  },
+   yaxis3: {
+    overlaying: 'y',
+    side: 'right'
+  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>Frequency (Hz)</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+	  
+	  type:'log',
+	  autorange:true,
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}
+
+var dloop4=[],deltz4;
+function plot_frq4(){
+	//counter++;
+	var dataPoints3=[];///frequency values
+	
+	var dataArrayY6 = [];///amplitude values
+		
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+	 
+	 deltz4 = math.floor(document.getElementById('dampR2').value*10)/10;
+	
+    table4 = document.getElementById('myTable4');
+	
+    for (var tabrowindex = 1; tabrowindex < table4.rows.length; tabrowindex++) {
+        var rwe = table4.rows[tabrowindex].cells;
+		dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		
+		//if(counter == 1){
+		dataArrayY6.push(parseFloat(rwe[4].innerHTML));
+		dloop4 = [...dataArrayY6];
+
+    }
+ var trace1 = {
+  x: dataPoints3,
+  y: dloop1,
+   name:'\u03B4 ='+ deltz,
+  marker: {color:"black"},
+  type: 'spline'
+};
+var trace2 = {
+  x: dataPoints3,
+  y: dloop2,
+   name:'\u03B4 ='+ deltz2,
+  marker: {color:"red"},
+  type: 'spline'
+};
+var trace3 = {
+  x: dataPoints3,
+  y: dloop3,
+   name:'\u03B4 ='+ deltz3,
+  marker: {color:"green"},
+  type: 'spline'
+};
+var trace4 = {
+  x: dataPoints3,
+  y: dataArrayY6,
+   name:'\u03B4 ='+ deltz4,
+  marker: {color:"blue"},
+  type: 'spline'
+};
+
+var data = [trace1,trace2,trace3,trace4];
+
+var layout = {
+  title: {
+	  text:'<b>Amplitude Vs. Frequency Plot </b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>Amplitude (cm)</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+	   yaxis2: {
+    overlaying: 'y',
+    side: 'right'
+  },
+   yaxis3: {
+    overlaying: 'y',
+    side: 'right'
+  },
+   yaxis4: {
+    overlaying: 'y',
+    side: 'right'
+  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>Frequency (Hz)</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+	  
+	  type:'log',
+	  autorange:true,
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}
+
+var dloop5=[],deltz5;
+function plot_frq4(){
+	//counter++;
+	var dataPoints3=[];///frequency values
+	
+	var dataArrayY7 = [];///amplitude values
+		
+	 document.getElementById('plotbucket').style.display  = "none";	 
+	 document.getElementById('chartContainer').style.display  = "none";
+	 document.getElementById('chartContainer_trans').style.display  = "none";
+	 document.getElementById('myPlot').style.display = "block";
+	 
+	 deltz5 = math.floor(document.getElementById('dampR2').value*10)/10;
+	
+    table4 = document.getElementById('myTable4');
+	
+    for (var tabrowindex = 1; tabrowindex < table4.rows.length; tabrowindex++) {
+        var rwe = table4.rows[tabrowindex].cells;
+		dataPoints3.push(parseFloat(rwe[1].innerHTML));
+		
+		//if(counter == 1){
+		dataArrayY7.push(parseFloat(rwe[4].innerHTML));
+		dloop5 = [...dataArrayY7];
+
+    }
+ var trace1 = {
+  x: dataPoints3,
+  y: dloop1,
+   name:'\u03B4 ='+ deltz,
+  marker: {color:"black"},
+  type: 'spline'
+};
+var trace2 = {
+  x: dataPoints3,
+  y: dloop2,
+   name:'\u03B4 ='+ deltz2,
+  marker: {color:"red"},
+  type: 'spline'
+};
+var trace3 = {
+  x: dataPoints3,
+  y: dloop3,
+   name:'\u03B4 ='+ deltz3,
+  marker: {color:"green"},
+  type: 'spline'
+};
+var trace4 = {
+  x: dataPoints3,
+  y: dloop4,
+   name:'\u03B4 ='+ deltz4,
+  marker: {color:"blue"},
+  type: 'spline'
+};
+var trace5 = {
+  x: dataPoints3,
+  y: dataArrayY7,
+   name:'\u03B4 ='+ deltz5,
+  marker: {color:"yellow"},
+  type: 'spline'
+};
+
+var data = [trace1,trace2,trace3,trace4,trace5];
+
+var layout = {
+  title: {
+	  text:'<b>Amplitude Vs. Frequency Plot </b>',
+	  font: {
+      family: 'Times New Roman',
+      size: 25
+    },
+  },
+  yaxis: {	  
+	  title: {
+		  text:'<b>Amplitude (cm)</b>',
+	       font: {
+      family: 'Times New Roman',
+		   },
+	  },
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2,
+	  
+	  },
+	   yaxis2: {
+    overlaying: 'y',
+    side: 'right'
+  },
+   yaxis3: {
+    overlaying: 'y',
+    side: 'right'
+  },
+   yaxis4: {
+    overlaying: 'y',
+    side: 'right'
+  },
+  xaxis: {
+	  
+	  title: {
+		  text:'<b>Frequency (Hz)</b>',
+		  font: {
+      family: 'Times New Roman',
+		  },
+	  },
+	        
+      "gridcolor": "#2EBCE2",
+      "gridwidth": 2, 
+	  
+	  type:'log',
+	  autorange:true,
+  } 
+};
+
+Plotly.newPlot('myPlot', data, layout); 
+	
+	}
 
 
-
-
- 
+function plot_frq(){
+	counter++;
+	if(counter==1){
+		plot_frq1();
+	}
+	if(counter==2){
+		plot_frq2();
+	}
+	if(counter==3){
+		plot_frq3();
+	}
+	if(counter==4){
+		plot_frq4();
+	}
+	if(counter==5){
+		plot_frq5();
+	}
+	
+	
+}
  
  
