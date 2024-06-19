@@ -75,7 +75,7 @@
         "a": "Voltmeter",
         "b": "Ammeter",
         "c": "Energy meter",
-        "d": "None of the above"
+        "d": "Wattmeter"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
