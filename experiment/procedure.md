@@ -9,7 +9,7 @@ The experiment is having two different types of circuit connections<br/>
 
 **Steps to perform the simulation**
 
-<b>Finding galvanometer constants :</b>
+<b>Finding galvanometer constants</b>
 
 1. First connect the circuit diagram properly through the connecting dots (black dots) according to below instruction. First the galvanometer would be connected in series with the resistance box R (Fig. 1.).
 
@@ -59,7 +59,7 @@ $$J = \frac{T^3(R_c + R_s)}{4 \pi^3 S^2} \ kg-m^2$$
 
 
 
-<b>Transient Response :</b>
+<b>Transient Response</b>
 
 1. First connect the circuit diagram as said in step 1 of 'Finding galvanometer constants' section. Click on 'Experiments' button, then 'Transient Response' under it.
 
@@ -90,7 +90,7 @@ $$\theta_1 = (First \ overshoot - \ Steady \ state \ value) \ and \ \theta_2 = (
 9. After taking 5 observations click on 'Plot' button, then on '&percnt; Maximum overshoot Vs. Damping ratio <span class="fontCss3">&delta;</span>'. The plot will be shown (hover over the plot section and then click on the camera icon located at the top right corner of the plot to download it). Click on 'Clear' button. Switch off the light.
 
 
-<b>Frequency Response :</b>
+<b>Frequency Response</b>
 
 1. Once the transient response of the galvanometer is acquired, it is possible to observe its frequency response. First connect the circuit diagram as instructed below.
 
