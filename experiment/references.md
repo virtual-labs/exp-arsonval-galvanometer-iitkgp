@@ -1,9 +1,9 @@
 ## References
 #### Books
 
-1) Electronic instrumentation - H S. Kalsi (McGraw Hill Education, 2015)
+1) H S. Kalsi - Electronic instrumentation (2015, McGraw Hill Education)
 
-2) A Course in Electrical and Electronic Measurements and Instrumentation- A.K. Sawhney (Dhanpat Rai & Co. (Pvt.) Ltd., 2012)
+2) A.K. Sawhney - A Course in Electrical and Electronic Measurements and Instrumentation (2012, Dhanpat Rai & Co. (Pvt.) Ltd.)
 
 
 #### Video Lectures
