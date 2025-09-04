@@ -7,7 +7,7 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Laboratory**
-<b> Experiment|     <b> **Transient and frequency response of D’Arsonval Galvanometer**
+<b> Experiment|     <b> **Transient and Frequency Response of D’ Arsonval Galvanometer**
 
 
 ### About the Experiment 

@@ -1001,16 +1001,20 @@ animation:glowudot6 1s linear forwards;
     text-align: center;	
 }
 
+.fontCss{
+
+font-family:'Bodoni MT';
+font-style:italic;
+
+
+}
 .fontCss2{
 
-    font-family:'Bodoni MT';
-    font-style:italic;
-    font-size:19px;
-    }
-    .fontCss3{
-        font-family:'Bodoni MT';
-        font-style:italic;        
-        }
+font-family:'Bodoni MT';
+font-style:italic;
+font-size:18px;
+
+}
 
 
 
