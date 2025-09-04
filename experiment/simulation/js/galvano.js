@@ -4,7 +4,9 @@
     Project Scientist-Technical,
     Virtual Labs IIT Kharagpur.*/ 
 
-window.alert('Desktop view in chrome is preferable or rotate your screen for better view. ')
+if (performance.navigation.type != 1) {
+window.alert('Use chrome in a Desktop/Laptop for better performance.')
+}
 
 ///////////oscilloscope and Function generator VARIABLES GLOBAL/////////////////////////////////////////////////////////////	
 var canvas,ctx;
@@ -1711,7 +1713,8 @@ var OsAmp,Oscm,pos1,pos2;
 var rootf1 = document.documentElement;
 var rootf2 = document.documentElement;
 function frqRes(){///when k2 closed circuit fig1,5 acc. manual
-	
+
+if(document.getElementById('wn4').value != 0){	
 	var dataOPPoints=[];///plot section for testing
 	
 var E= 2;///2 v dc supply
@@ -1792,7 +1795,10 @@ frq_osci();
 //rootf1.style.setProperty('--change4', pos1 + "%");
 
 //rootf2.style.setProperty('--change5', pos2 + "%");
-
+}
+else{
+	alert('The natural frequency of galvanometer can not be zero.');
+}
 
 }
 var left2 = 50;
@@ -1848,7 +1854,7 @@ document.getElementById('bloomDot').style.left = temp2+'%';
 
 ///Galvanometer constants result show
 function showResult1(){
-	
+if(document.getElementById('avgtimep').value != 0 && document.getElementById('Rc').value != 0 && document.getElementById('Rs').value != 0	&& document.getElementById('S').value != 0){
 var T     = document.getElementById('avgtimep').value;	
 var Rcoil = document.getElementById('Rc').value;	
 var Rext  = document.getElementById('Rs').value;	
@@ -1859,36 +1865,49 @@ document.getElementById('g').value = math.divide(math.multiply(T,math.add(Rcoil,
 document.getElementById('c').value = math.divide(math.multiply(T,math.add(Rcoil,Rext)),math.multiply(math.pi,math.pow(S,2))).toPrecision(4);	
 
 document.getElementById('j').value = math.divide(math.multiply(math.pow(T,3),math.add(Rcoil,Rext)),math.multiply(4,math.pow(math.pi,3),math.pow(S,2))).toPrecision(4);
-	
+}
+else{
+	alert('None of the following values can be zero: average time period, coil resistance, external resistance, or sensitivity. Please enter valid values.');
+}	
 }
 
 ///Transient response open circuit damping ratio
 function showResult2(){
-	
+if(document.getElementById('theta1').value != 0 && document.getElementById('theta2').value != 0){	
 var T1     = document.getElementById('theta1').value;	
 var T2 	   = document.getElementById('theta2').value;	
 
 document.getElementById('dampR').value = math.divide(math.log(math.divide(T1,T2),math.e),math.pi);
-	
+}
+else{
+	alert('None of the following values can be zero:  θ<sub>1</sub>,  θ<sub>2</sub>. Please enter valid values.');
+}	
 }
 
 ///Transient response percentage overshoot
 function showResult3(){
-	
+if(document.getElementById('thetapeak').value != 0 && document.getElementById('thetass').value != 0){	
 var tpeak  = document.getElementById('thetapeak').value;	
 var tss	   = document.getElementById('thetass').value;	
 
 document.getElementById('pov').value = math.multiply(math.divide(math.subtract(tpeak,tss),tss),100);
-	
+}
+else{
+	alert('None of the following values can be zero:  θ<sub>peak</sub>,  θ<sub>steady-state</sub>. Please enter valid values.');
+}	
 }
 
 ///Frequency response Wn
 function showResult4(){
-	
+if(document.getElementById('tp4').value != 0){	
 var T  = document.getElementById('tp4').value;	
 var nf = math.divide(math.multiply(2,math.pi),T);	
 
 document.getElementById('wn4').value = nf;
+}
+else{
+	alert('Enter the value of average time period of the galvanometer calculated in Finding galvanometer constants section.');
+}
 	
 }
 
@@ -3688,7 +3707,7 @@ Plotly.newPlot('myPlot', data, layout);
 	}
 
 var dloop5=[],deltz5;
-function plot_frq4(){
+function plot_frq5(){
 	//counter++;
 	var dataPoints3=[];///frequency values
 	

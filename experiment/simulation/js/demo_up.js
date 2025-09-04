@@ -175,48 +175,32 @@ jsPlumb.ready(function () {
 			
 			
              instance.connect({ source: e10, target: e24 });
-			 e10.canvas.style.pointerEvents = "none";///disable first
-			 e10.setEnabled(false);///stop the reconnection
-			 e24.canvas.style.pointerEvents = "none";///disable first
-			 e24.setEnabled(false);///stop the reconnection
-			
-			///NEW ADDITION TO DISPLAY CONNECTION POINT NUMBERS DURING DELEETE
-		
-		var name1, name2;
+			 //instance.connect({ source: e1, target: e13 });
+			// instance.connect({ source: e2, target: e14 });
 			 
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-		  ///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
-		 for(var cpoint =1; cpoint<=24; cpoint++){
-			 if(conn.sourceId=='bd'+cpoint){
-				 name1 = cpoint;
-			 }
-			 if(conn.targetId=='bd'+cpoint){ 
-		  name2= cpoint;
-		 }
-		 } 	  
-		  if((conn.sourceId!='bd10' && conn.targetId!='bd24')){
-            if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 1)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 1)) && confirm('Delete connection from'+' ' + name1 + ' ' + 'to' + ' ' + name2 + '?')) {////for k2 opening
+            if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 1)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 1)) && confirm("Delete connection ?")) {////for k2 opening
                instance.deleteConnection(conn);
 			   TimePeriod();
 			}
-			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 2)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 2)) && confirm('Delete connection from'+' ' + name1 + ' ' + 'to' + ' ' + name2 + '?')) {////for k2 opening
+			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 2)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 2)) && confirm("Delete connection ?")) {////for k2 opening
                instance.deleteConnection(conn);
 			   criticalDamping();
 			}
 
-			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 3)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 3)) && confirm('Delete connection from'+' ' + name1 + ' ' + 'to' + ' ' + name2 + '?')) {////for k2 opening
+			else if (((conn.sourceId=='bd13' && conn.targetId=='bd18' && document.getElementById('partchk').value == 3)|| (conn.sourceId=='bd18' && conn.targetId=='bd13' && document.getElementById('partchk').value == 3)) && confirm("Delete connection ?")) {////for k2 opening
                instance.deleteConnection(conn);
 			   TimePeriod();
 			   transients();
 			}
 			
-		 else if(confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {			 
+		 else  {			 
                instance.deleteConnection(conn);
 			         }
 		
-		  }
+   
         }); 
 
    
@@ -908,7 +892,7 @@ jsPlumb.ready(function () {
 			
 			///output 	
 		///series
-        if (is_connected_10_24 && is_connected_9_17 && is_connected_8_11 && is_connected_17_7 && is_connected_6_16 && is_connected_12_21 && is_connected_13_18 && is_connected_14_22 && is_connected_15_7 && is_connected_23_6 && is_connected_19_20 && !is_connected_14_23 && !is_connected_7_22 && !is_connected_1_17 && !is_connected_2_11 && !unallowed_connection_present ) {
+        if (is_connected_10_24 && is_connected_9_17 && is_connected_8_11 && is_connected_17_7 && is_connected_6_16 && is_connected_12_21 && is_connected_13_18 && is_connected_14_22 && is_connected_15_7 && is_connected_23_6 && is_connected_19_20 && !is_connected_14_23 && !is_connected_7_22 && !is_connected_1_7 && !is_connected_2_11 && !unallowed_connection_present ) {
 			            
 			document.getElementById('partchk').value = 1;
 			
@@ -916,7 +900,7 @@ jsPlumb.ready(function () {
 			//document.getElementById('myTable1').style.visibility ="visible";
            }
 		   
-		else if (is_connected_10_24 && is_connected_9_17 && is_connected_8_11 && is_connected_7_22 && is_connected_6_16 && is_connected_12_21 && is_connected_13_18 && is_connected_17_22 && is_connected_14_23 && is_connected_15_7 && is_connected_23_6 && is_connected_19_20 && !is_connected_14_22 && !is_connected_1_17 && !is_connected_2_11 && !unallowed_connection_present ) {
+		else if (is_connected_10_24 && is_connected_9_17 && is_connected_8_11 && is_connected_7_22 && is_connected_6_16 && is_connected_12_21 && is_connected_13_18 && is_connected_17_22 && is_connected_14_23 && is_connected_15_7 && is_connected_23_6 && is_connected_19_20 && !is_connected_14_22 && !is_connected_1_7 && !is_connected_2_11 && !unallowed_connection_present ) {
 			            
 			document.getElementById('partchk').value = 2;
 			
