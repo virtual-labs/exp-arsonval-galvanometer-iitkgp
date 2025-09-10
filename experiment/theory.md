@@ -127,7 +127,9 @@ where <span class="fontCss">G</span> is the displacement constant of the galvano
 <b>2. Constant of inertia (<span class="fontCss">J</span>) :</b> A retarding torque is produced owing to inertia of moving system. This torque is dependent upon the moment of inertia of moving system and the angular acceleration.
 
 $$T_i = J \frac{d^2\theta}{d t^2} \tag{9}$$
-where, <span class="fontCss">J</span> = Moment of inertia of moving system about the axis of rotation, kg-m^2<br/>
+
+where, 
+<span class="fontCss">J</span> = Moment of inertia of moving system about the axis of rotation, kg-m<sup>2</sup><br/>
 
 <!-- $$\frac{d^2\theta}{d t^2} = Angular \ acceleration$$ -->
 <span class="fontCss2">&theta;</span> = Deflection at any time <span class="fontCss2">t</span><br/>
