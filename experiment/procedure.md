@@ -28,7 +28,7 @@ The experiment is having two different types of circuit connections<br/>
 <ul>
 <li>Keeping R to zero value adjust the values of P (0.2 &ohm;) and Q (1670&ohm;) by respective rotating knobs to achieve 20 cm deflection on scale.</li>
 <li><b>Note:</b> To rotate any knob put the mouse cursor on the knob handle (blue line on the knob), a hand symbol will be showing. Press left mouse button, rotate clockwise to increase or anticlockwise to decrease values.</li>
-<li><b>Note:</b> If the desired value does not appear while rotating the knob in one attempt, try rotating it back and forth to reach the correct value.</li>
+<li><b>Note:</b> If the desired value does not appear while rotating the knob in one attempt, try rotating it back and forth to reach the correct value. If the knob becomes unresponsive at any time, please refresh the page and repeat the experiment.</li>
 <li>(<b>Note:</b> The numbers, written near the knobs (in &ohm; or k&ohm;), shows the multiplying factors of respective knobs.)</li>						
 <li> Now open the switch K<sub>2</sub> by removing the connection 13-18 through clicking on it.</li>
 <li>After clicking on the connection 13-18, one alert message will come. Keep ready the stop watch in mobile.</li>
