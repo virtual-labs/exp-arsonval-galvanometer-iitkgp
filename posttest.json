@@ -1,0 +1,123 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In ballistic galvanometer, the frame on which the coil is wound is non-metallic. It is ____",
+      "answers": {
+        "a": "To avoid the production of induced e.m.f.",
+        "b": "To avoid the production of eddy currents.",
+        "c": "To increase the production of eddy currents.",
+        "d": "To increase the production of induced e.m.f."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. A null type of instrument as compared to a deflection type instrument has ______",
+      "answers": {
+        "a": "A higher accuracy",
+        "b": "A lower sensitivity",
+        "c": "A faster response",
+        "d": "All the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a second order system, the peak overshoot is 100 &percnt;. The value of damping factor is :",
+      "answers": {
+        "a": "1",
+        "b": "0.707",
+        "c": "0",
+        "d": "0.5"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The sensitivity of a moving coil galvanometer can be increased by decreasing ____",
+      "answers": {
+        "a": "The number of turns in the coil.",
+        "b": "The area of the coil.",
+        "c": "The magnetic field.",
+        "d": "The couple per unit twist of the suspension."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The deflection &theta; is related to the electric current I in a galvanometer by the relation",
+      "answers": {
+        "a": "I &prop; &theta;",
+        "b": "I &prop; tan &theta;",
+		"c": "I &prop; sin &theta;",
+        "d": "I &prop; cos &theta;"
+        
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the shape of the magnet, used in D’Arsonval galvanometer when a large flux is required in the air gap ?",
+      "answers": {
+        "a": "Convex cylindrical magnet",
+        "b": "Horse-shoe magnet",
+        "c": "Concave cylindrical magnet ",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Phosphor- bronze wire is used in suspension because it has _____",
+      "answers": {
+        "a": "A large couple per unit twist",
+        "b": "A small couple per unit twist",
+        "c": "Low conductivity",
+        "d": "High Sensitivity"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. A moving coil instrument has the following data.<br/> Number of turns = 100, width of the coil = 20 mm, depth of the coil = 30 mm, flux density in the gap = 0.1 Wb/m<sup>2</sup>. Calculate the deflecting torque when carrying a current of 10 mA.",
+      "answers": {
+        "a": "6 &times; 10<sup>-5</sup> Nm",
+        "b": "4 &times; 10<sup>-5</sup> Nm",
+        "c": "10 Nm",
+        "d": "None of the above"
+        
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }, 
+    
+	
+	{
+      "question": "9. A moving coil instrument has the following data.<br/> No. of turns = 100, width of the coil = 20 mm, depth of the coil = 30 mm, flux density in the gap = 0.1 Wb/m<sup>2</sup>, the deflection torque = 30 &times; 10<sup>–6</sup> Nm. Calculate the current through the moving coil.",
+      "answers": {
+        "a": "2 mA",
+        "b": "5 mA",
+        "c": "10 mA",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "10. In measurement systems, which of the following static characteristics are desirable ?",
+      "answers": {
+        "a": "Accuracy",
+        "b": "Sensitivity",
+		"c": "Reproducibility",
+        "d": "All the above"
+       
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+	
+	
+  ]
+}
