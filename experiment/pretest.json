@@ -2,38 +2,119 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. An instrument detects the presence of electric current in the circuit, is known as,",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Galvanometer",
+        "b": "Voltmeter",
+        "c": "Rheostat",
+        "d": "Wattmeter"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. In a D’Arsonval galvanometer what is the purpose of using iron core between two pole faces ?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The effect of stray magnetic field is reduced",
+        "b": "Moment of inertia of moving parts become smaller",
+        "c": "Cost of production is reduced",
+        "d": "Flux density in the air gap becomes high, causing large deflecting torque"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which is the most common absolute instrument that gives the measured current in form of the tangent of deflected angle ?",
+      "answers": {
+        "a": "Tangent Galvanometer",
+        "b": "Tangent Voltmeter",
+        "c": "Tangent Rheostat",
+        "d": "Tangent Wattmeter"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Galvanometer connected with high resistance in series is used as ___",
+      "answers": {
+        "a": "Ohmmeter",
+        "b": "Ammeter",
+        "c": "Wattmeter",
+        "d": "Voltmeter"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Sometimes D’Arsonval galvanometer does not use ferromagnetic cores between the poles of permanent magnet, in this case,",
+      "answers": {
+        "a": "The flux density becomes smaller, resulting in low deflecting torque.",
+        "b": "The dimension of moving coil can be made smaller, thereby reducing moment of inertia.",
+        "c": "The magnetic field may not be radial, resulting in a non-uniform scale even if spring control is used.",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "6. How does a galvanometer become an ammeter ?",
+      "answers": {
+        "a": "By wiring a high resistance shunt to the galvanometer in parallel.",
+        "b": "By connecting a low resistance shunt to the galvanometer in parallel.",
+        "c": "A high resistance shunt is connected in series with the galvanometer.",
+        "d": "A low resistance shunt is connected in series with the galvanometer."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },	
+	
+	
+	{
+      "question": "7. Which one of the following meters is an integrating type instrument?",
+      "answers": {
+        "a": "Voltmeter",
+        "b": "Ammeter",
+        "c": "Energy meter",
+        "d": "Wattmeter"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+	{
+	 "question": "8. The advantage of using galvanometers is ___________?",
+      "answers": {
+        "a": "High accuracy",
+        "b": "High reliability",
+        "c": "High sensitivity",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "9. A moving coil instrument has the following data.<br/> Number of turns = 100, width of the coil = 20 mm, depth of the coil = 30 mm, flux density in the gap = 0.1 Wb/m<sup>2</sup>. Calculate the deflection when carrying a current of 10 mA and the control spring constant is 2 &times; 10<sup>–6</sup> Nm/degree.",
+      "answers": {
+        "a": "6 &deg;",
+        "b": "10 &deg;",
+        "c": "30 &deg;",
+        "d": "45 &deg;"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+	{
+	 "question": "10. The advantage of PMMC type instruments is _______",
+      "answers": {
+        "a": "They can be modified with the help of shunts and resistance to cover a wide range of currents and voltages.",
+        "b": "They display no hystersis.",
+        "c": "Since operating fields of such instruments are very strong, they are not significantly affected by stray magnetic fields.",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
     }
+	
   ]
 }
